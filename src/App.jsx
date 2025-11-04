@@ -7,8 +7,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#b73939" },
-    secondary: { main: "#e85252" },
+    primary: { main: "#1e3662" },
+    secondary: { main: "#1f7a8b" },
   },
   typography: {
     fontFamily: "'Montserrat', sans-serif",
@@ -18,11 +18,11 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#b73939",
+            borderColor: "#1e3662",
             borderWidth: "2px",
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#e85252",
+            borderColor: "#1f7a8b",
           },
         },
       },
@@ -31,7 +31,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           "&.Mui-focused": {
-            color: "#b73939",
+            color: "#1e3662",
           },
         },
       },
@@ -40,7 +40,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           "&.Mui-checked": {
-            color: "#e85252",
+            color: "#1f7a8b",
           },
         },
       },

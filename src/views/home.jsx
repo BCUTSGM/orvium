@@ -82,8 +82,6 @@ export default function Home() {
             sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
           >
             {t("home_page.portada_subtitulo_1")}
-            <br></br>
-            {t("home_page.portada_subtitulo_2")}
           </Typography>
           <Button
             variant="contained"
@@ -94,7 +92,7 @@ export default function Home() {
               px: 3,
               py: 1.5,
               fontSize: "0.5 rem",
-              background: "#e85252",
+              background: "#1f7a8b",
               mt: 2,
             }}
           >

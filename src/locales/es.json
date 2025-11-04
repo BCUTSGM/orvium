@@ -1,133 +1,128 @@
 {
     "navbar": {
         "inicio": "Inicio",
+        "nosotros": "Quiénes Somos",
         "servicios": "Servicios",
-        "servicios_maritimo": "Marítimo",
-        "servicios_aereo": "Aéreo",
-        "servicios_terrestre": "Terrestre",
-        "nosotros": "Nosotros",
-        "blog": "Blog",
+        "consultoria": "Consultoría",
+        "asesoria": "Asesoría",
+        "mentoria": "Mentoría",
+        "incubacion": "Incubación",
         "contacto": "Contacto"
     },
     "footer": {
-        "corporativo": "CORPORATIVO",
-        "direccion_linea1": "Carretera Federal Puebla - Tlaxcala Km 11.5",
-        "direccion_linea2": "No. 1027 c.p. 72100 Puebla, Pue.",
-        "copyright": "cslogix © 2025"
-    },
-    "aereo_page": {
-        "meta_titulo": "Transporte Aéreo - cslogix",
-        "meta_descripcion": "cslogix ofrece transporte aéreo internacional rápido, seguro y confiable para tus importaciones y exportaciones.",
-        "titulo_principal": "Servicio Aéreo",
-        "subtitulo": "Con el servicio aéreo reduce tiempos de tránsito",
-        "garantia": "cslogix garantiza una gestión competente, rápida y precisa.",
-        "parrafo_pregunta": "¿Necesitas mover tu mercancía lo antes posible?",
-        "parrafo_respuesta": "Te brindamos la solución perfecta con nuestro servicio aéreo, flexible y confiable. Nos encargamos de todo el proceso, desde los principales aeropuertos de México, satisfacemos las necesidades y requerimientos de nuestros clientes en sus operaciones de exportación e importación.",
-        "titulo_ofrecemos": "Te brindamos:",
-        "boton_cotizar": "Cotiza tu contenedor",
-        "frase_final": "¡Nuestra atención y tarifas hacen la diferencia en tu empresa!"
-    },
-    "maritimo_page": {
-    "meta_titulo": "Transporte Marítimo - cslogix",
-    "meta_descripcion": "cslogix ofrece soluciones logísticas en transporte marítimo con cobertura global y tarifas competitivas.",
-    "titulo_principal": "Servicio Marítimo",
-    "subtitulo": "Mueves grandes volúmenes de carga",
-    "garantia": "Con cslogix transportamos tu mercancía a los principales puertos del mundo",
-    "parrafo_pregunta": "¿Planeas expandir tu empresa y comenzar a exportar o importar con grandes cargas?",
-    "parrafo_respuesta": "Te brindamos soluciones de alto nivel trasladando tu mercancía por los cinco continentes con tarifas competitivas A través del servicio de transporte marítimo despachamos todo tipo de contenedores (dry, reefe, open top, flat rack, open side, etc.) hacia y desde cualquier puerto del mundo (exportación e importación) con un servicio flexible y seguro de inicio a fin de tu embarque.",
-    "titulo_ofrecemos": "Te brindamos:",
-    "boton_cotizar": "Cotiza tu contenedor",
-    "frase_final": "Con la tecnología aplicada en cslogix, estarás informado en tiempo real brindándote tranquilidad!"
-    },
-    "terrestre_page": {
-    "meta_titulo": "Transporte Terrestre - cslogix",
-    "meta_descripcion": "cslogix brinda soluciones eficientes en transporte terrestre internacional y nacional para tu mercancía.",
-    "titulo_principal": "Transporte Vía Terrestre",
-    "subtitulo": "Con el servicio terrestre ahorra en costos de envío",
-    "garantia": "Realizamos cualquier movimiento terrestre dentro y fuera de la república Mexicana.",
-    "parrafo_pregunta": "¿Buscas versatilidad para transportar tu mercancía?",
-    "parrafo_respuesta": "cslogix es la opción ideal de transporte considerando cualquier tamaño y volumen de su mercancía; la entregamos con trazabilidad, puntualidad y fiabilidad. Garantizamos el transporte seguro y eficaz, además tomamos en cuenta todas las variables que intervienen ofreciendo soluciones económicas, rápidas y eficaces para todos nuestros clientes.",
-    "titulo_ofrecemos": "Te brindamos:",
-    "boton_cotizar": "Cotiza tu Flete",
-    "frase_final": "¡Estamos capacitados para transportar, distribuir y entregar tu mercancía con confianza y tranquilidad!"
-    },
-    "blog_page": {
-    "meta_titulo": "Blog - cslogix",
-    "meta_descripcion": "No te pierdas lo último en comercio internacional y logística",
-    "titulo_principal": "¡Te conectamos con el mundo!",
-    "seccion_ultimas_noticias": "Últimas Noticias",
-    "seccion_comercio_internacional": "Comercio Internacional",
-    "seccion_exportacion": "Exportación",
-    "seccion_importacion": "Importación",
-    "seccion_logistica": "Logística",
-    "seccion_mexico": "México",
-    "seccion_puertos": "Puertos",
-    "seccion_tecnologia": "Tecnología",
-    "seccion_transporte": "Transporte"
-    },
-    "contacto_page": {
-    "meta_titulo": "Contacto - cslogix",
-    "meta_descripcion": "Ponte en contacto con cslogix para recibir asesoría en logística internacional y gestión aduanera.",
-    "titulo_formulario": "Contáctenos",
-    "campo_nombre": "Nombre",
-    "campo_email": "Email",
-    "campo_empresa": "Empresa",
-    "campo_mensaje": "Mensaje",
-    "error_campos_vacios": " Por favor completa todos los campos para enviar el formulario.",
-    "boton_enviar": "ENVIAR",
-    "alerta_exito": " Mensaje enviado con éxito",
-    "alerta_error": " Hubo un error al enviar el mensaje",
-    "titulo_llamanos": "LLÁMANOS",
-    "titulo_correo": "CORREO ELECTRÓNICO",
-    "titulo_localizacion": "LOCALIZACIÓN",
-    "direccion_linea1": "Carretera Federal libre Puebla, 11 5 1027,",
-    "direccion_linea2": "90880 Tenancingo, Tlax., México",
-    "titulo_servicios": "NUESTROS MEJORES SERVICIOS",
-    "servicio_terrestre": "Transporte Terrestre",
-    "servicio_maritimo": "Transporte Marítimo",
-    "servicio_aereo": "Transporte Aéreo"
+        "empresa": "ORVIUM",
+        "descripcion": "Servicios para optimizar la integración mundial (internacionalización) de negocios",
+        "direccion_linea1": "Ciudad de México, México",
+        "copyright": "© 2025 ORVIUM"
     },
     "home_page": {
-    "meta_titulo": "cslogix - Soluciones Logísticas Internacionales",
-    "meta_descripcion": "cslogix ofrece soluciones innovadoras para importación, exportación y transporte internacional con tarifas competitivas y tecnología en tiempo real.",
-    "portada_titulo": "cslogix",
-    "portada_subtitulo_1": "Apoyamos empresas exportadoras e importadoras con soluciones",
-    "portada_subtitulo_2": "logísticas y de gestión aduanera del comercio internacional.",
-    "portada_boton": "Contáctanos",
-    "servicios_titulo": "Servicios Logísticos",
-    "servicios_subtitulo": "Somos un ecosistema de apoyo empresarial que se adapta a ti y a tus necesidades.",
-    "servicios_parrafo": "Contribuimos ofreciéndote tarifas competitivas y seleccionamos la mejor ruta así como el transporte, reduciendo tus costos de traslado.",
-    "servicios_card_maritimo": "Marítimo",
-    "servicios_card_terrestre": "Terrestre",
-    "servicios_card_aereo": "Aéreo",
-    "control_titulo": "Con cslogix toma el control de tu Cadena Logística",
-    "control_subtitulo": "Se conforma de 5 áreas para apoyar tu gestión eficiente:",
-    "tecnologia_subtitulo": "Visibilidad en toda tu cadena logística con un solo clic",
-    "tecnologia_titulo": "Tecnología en cada servicio",
-    "tecnologia_parrafo": "cslogix te ofrece la manera de estar informado sobre la validación de documentos, las salidas y entregas de tu mercancía en tiempo real.",
-    "tecnologia_lista_1": "Plataforma Digital de Intercomunicación con todos los actores participantes en cada operación.",
-    "tecnologia_lista_2": "App de seguimiento de operaciones y despacho aduanal.",
-    "tecnologia_boton": "Conócenos",
-    "beneficios_titulo": "Nuestros Beneficios",
-    "beneficios_subtitulo": "Explora cada uno de los tres tracking en tiempo real que tenemos para tu empresa.",
-    "beneficios_parrafo": "Gracias a su tecnología, cslogix te permite conocer la trazabilidad de tu mercancía para mayor seguridad, mejorando la comunicación con tus proveedores y ahorrándote tiempo.",
-    "mundo_titulo": "Llegamos a cualquier parte del Mundo",
-    "mundo_subtitulo": "Contamos con una red de aliados en América, Europa y Asia",
-    "mundo_lista_1": "Estamos listos para hacer llegar tu mercancía a su destino con un personal capacitado que permitirá optimizar tus costos y tiempos de entrega.",
-    "mundo_boton": "Cuéntanos de tu proyecto"
+        "meta_titulo": "Orvium - Internacionalización de Negocios",
+        "meta_descripcion": "Consultoría, asesoría y mentoría para impulsar la internacionalización de empresas y proyectos globales.",
+        "titulo_principal": "ORVIUM",
+        "subtitulo": "Servicios para optimizar la integración mundial (internacionalización) de negocios",
+        "quienes_somos_titulo": "Quiénes Somos",
+        "quienes_somos_texto": "Somos un equipo interdisciplinario operando en diversos ámbitos del comercio internacional. Ofrecemos consultoría y asesoría para definir, estructurar, valorar la viabilidad técnico-financiera e implementar iniciativas de internacionalización de negocios.",
+        "servicios_titulo": "Nuestros Servicios",
+        "servicios_lista": {
+            "consultoria": "Consultoría",
+            "asesoria": "Asesoría",
+            "mentoria": "Mentoría",
+            "incubacion": "Incubación"
+        }
     },
-    "nosotros_page": {
-    "meta_titulo": "Nosotros - cslogix",
-    "meta_descripcion": "Conoce la historia, misión y valores de cslogix, expertos en soluciones logísticas internacionales.",
-    "titulo_principal": "Conectando Fronteras",
-    "subtitulo": "Crecimiento e innovación para el control de tu cadena logística internacional",
-    "parrafo_compromiso": "Nuestro compromiso es respaldar a empresas que participan en el comercio internacional, brindándoles soluciones logísticas y de gestión aduanera para fortalecer, asegurar y facilitar las operaciones de importación y exportación de forma eficiente y sin contratiempos.",
-    "mision_titulo": "Misión",
-    "mision_texto": "cslogix, es una empresa comprometida en dar soporte a estrategias y brindar soluciones eficientes en cada operación logística de comercio internacional con tecnología de punta, rentabilidad y mejora continua.",
-    "vision_titulo": "Visión",
-    "vision_texto": "En 2025, somos una de las 5 principales organizaciones privadas que dan soporte integral a operaciones de comercio internacional cumpliendo las expectativas de nuestros clientes.",
-    "gestion_titulo": "Aseguramos una gestión eficiente",
-    "gestion_parrafo": "Nuestra fórmula para el éxito incluye el desarrollo constante de soluciones de distribución flexibles y específicas para cada cliente, a precios competitivos. Con alcance global y el respaldo personalizado de nuestro equipo, creamos relaciones sólidas basadas en la calidad del servicio y la última tecnología de información.",
-    "gestion_boton": "Cotiza tu carga ahora"
+    "consultoria_page": {
+        "meta_titulo": "Consultoría - ORVIUM",
+        "meta_descripcion": "Evaluamos la oferta exportable, la viabilidad técnica y financiera para lograr la internacionalización exitosa de tu negocio.",
+        "titulo_principal": "Consultoría",
+        "subtitulo": "Diagnóstico y planeación para competir globalmente",
+        "descripcion": "Revisamos en forma diagnóstica la iniciativa de exportación para detectar si los productos y la gestión del proceso tienen las condiciones necesarias para competir en los mercados seleccionados.",
+        "analisis": {
+            "producto": "Características técnicas y mercadológicas",
+            "mercado": "Demanda, competencia y mecanismos de comercialización, incluyendo empaque y embalaje",
+            "produccion": "Tamaño, proceso y costos de producción",
+            "organizacion": "Gestión administrativa y tecnológica para mercados internacionales",
+            "distribucion": "Cadena de distribución internacional",
+            "finanzas": "Capacidad o requerimientos financieros",
+            "alianzas": "Alianzas estratégicas y viabilidad técnica-financiera"
+        },
+        "estrategias": {
+            "titulo": "Estrategias en Exportación o Importación",
+            "texto": "Diseñamos un plan de acción a largo plazo con acciones de corto plazo, identificando mecanismos de implementación y viabilidad técnico-financiera para:",
+            "puntos": [
+                "Definir opciones en regulaciones arancelarias y no arancelarias",
+                "Identificar mercados potenciales y mecanismos de comercialización",
+                "Estructurar la cadena logística seleccionando transportes y rutas pertinentes",
+                "Poner en marcha la estrategia de internacionalización"
+            ]
+        }
+    },
+    "asesoria_page": {
+        "meta_titulo": "Asesoría - ORVIUM",
+        "meta_descripcion": "Ofrecemos información estratégica para optimizar tus procesos de internacionalización mediante asesoría personalizada.",
+        "titulo_principal": "Asesoría",
+        "subtitulo": "Información valiosa para la expansión global de tu negocio",
+        "descripcion": "Nuestros servicios de asesoría aportan valor a tus procesos de internacionalización mediante:",
+        "servicios": [
+            "Listado de empresas clientes y/o proveedores en el mercado de tu interés",
+            "Directorio de empresas internacionales con domicilios y datos de contacto",
+            "Primer contacto de negocios (videollamada o presencial)",
+            "Representación comercial para promover tus exportaciones o importaciones",
+            "Acompañamiento en el diseño, desarrollo o implementación de tu plan de expansión"
+        ],
+        "nota": "En todos nuestros servicios se identifican áreas de oportunidad, se sugieren e implementan mejoras. Los servicios pueden contratarse en conjunto o por temática, ajustándose a tus requerimientos."
+    },
+    "mentoria_page": {
+        "meta_titulo": "Mentoría - ORVIUM",
+        "meta_descripcion": "Programas de mentoría personalizados para acelerar la internacionalización y conectar con fuentes de financiamiento.",
+        "titulo_principal": "Mentoría",
+        "subtitulo": "Acompañamiento experto para impulsar tu expansión global",
+        "descripcion": "Identificamos las áreas de oportunidad de tu proyecto de internacionalización y te brindamos mentoría, consultoría o acompañamiento a la medida, incluyendo acceso a financiamiento.",
+        "programa_aceleramiento": {
+            "titulo": "Aceleramiento (10 semanas)",
+            "objetivo": "Dar valor, enriquecer la experiencia operativa de la empresa o proyecto y definir un plan de acción para aprovechar oportunidades de negocio.",
+            "modelo": [
+                "Diagnóstico integral Ex Ante",
+                "Valoración de procesos o productos innovadores",
+                "Plan de aceleramiento con acciones técnicas, financieras y legales",
+                "Mentoría de seguimiento a plan de acción",
+                "Mentoría personalizada con expertos",
+                "Evaluación financiera y fuentes de financiamiento",
+                "Mentoría de gestión, pitch y presentación ante inversionistas",
+                "Acompañamiento ex post a 30 y 60 días"
+            ],
+            "resultados": [
+                "Acceso efectivo a mercados internacionales",
+                "Maximización del talento empresarial",
+                "Minimización de riesgos internacionales",
+                "Acceso a opciones de financiamiento",
+                "Networking internacional"
+            ]
+        }
+    },
+    "incubacion_page": {
+        "meta_titulo": "Incubación - ORVIUM",
+        "meta_descripcion": "Transformamos ideas con potencial internacional en empresas listas para integrarse a cadenas globales de valor.",
+        "titulo_principal": "Incubación",
+        "subtitulo": "De la idea al mercado global",
+        "descripcion": "Ofrecemos convertir ideas con potencial internacional en empresas operativas listas para integrarse en cadenas globales de valor.",
+        "duracion": "16 semanas",
+        "modelo": [
+            "Validación del modelo de negocio (CANVAS)",
+            "Planeación estratégica comercial internacional (visión, misión, objetivos)",
+            "Desarrollo del producto o servicio (PMV)",
+            "Elaboración de plan de negocios (mercado, técnico, financiero)",
+            "Evaluación de viabilidad técnico-financiera",
+            "Cumplimiento legal y logístico",
+            "Presentación final ante aliados y fuentes de financiamiento"
+        ],
+        "resultados": [
+            "Plan de negocio integral",
+            "Producto mínimo viable",
+            "Herramientas para ajustar el modelo de negocio",
+            "Asesoría en planeación y seguimiento del impacto",
+            "Verificación de objetivos operativos y financieros",
+            "Acceso a fuentes de financiamiento y redes de apoyo",
+            "Mentoría ex post"
+        ]
     }
 }
