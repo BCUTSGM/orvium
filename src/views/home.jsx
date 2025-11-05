@@ -8,21 +8,14 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import fondo from "../assets/home/portada.jpg";
-import maritimo from "../assets/home/maritimo.png";
-import terrestre from "../assets/home/terrestre.png";
-import aereo from "../assets/home/aereo.png";
-import celular from "../assets/home/celular.jpg";
-import documentacionOperacion from "../assets/home/1.png";
-import despachoAduanal from "../assets/home/2.png";
-import fisicoMercancia from "../assets/home/3.png";
-import mundo from "../assets/home/mundo.png";
+import consultoria from "../assets/home/maritimo.png";
+import asesoria from "../assets/home/terrestre.png";
+import mentoria from "../assets/home/aereo.png";
+import viñeta from "../assets/home/viñetaB.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import viñeta from "../assets/home/viñetaB.png"
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
@@ -54,9 +47,10 @@ export default function Home() {
 
   return (
     <Box>
+      {/* Sección principal */}
       <Box
         sx={{
-          backgroundImage: `url(${fondo})`,
+          backgroundColor:"#1f7a8b",
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
@@ -85,12 +79,12 @@ export default function Home() {
           <Button
             variant="contained"
             endIcon={<WhatsAppIcon />}
-            href="https://api.whatsapp.com/send/?phone=525560751740&text=Quiero+una+Demo+y+m%C3%A1s+informaci%C3%B3n&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=525560751740&text=Hola,+quisiera+más+información"
             sx={{
               borderRadius: 3,
               px: 3,
               py: 1.5,
-              fontSize: "0.5 rem",
+              fontSize: "1rem",
               background: "#1f7a8b",
               mt: 2,
             }}
@@ -100,331 +94,240 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Box sx={{ padding: 4, textAlign: "justify" }}>
+      {/* Quiénes somos */}
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 6, textAlign: "center" }}>
+        <Typography
+          variant="h3"
+          sx={{ color: "#113a63", fontWeight: "bold", mb: 3 }}
+        >
+          {t("home_page.quienes_somos_titulo")}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            color: "#113a63",
+            fontSize: { xs: "1rem", md: "1.2rem" },
+            textAlign: "justify",
+          }}
+        >
+          {t("home_page.quienes_somos_texto")}
+        </Typography>
+      </Box>
+
+      {/* Servicios */}
+      <Box sx={{ padding: 4, textAlign: "center" }}>
         <Typography
           variant="h3"
           gutterBottom
           sx={{
             fontWeight: "bold",
             color: "#113a63",
-            textAlign: "center",
             fontSize: { xs: "1.8rem", md: "2.5rem" },
+            mb: 4,
           }}
         >
           {t("home_page.servicios_titulo")}
         </Typography>
+
+        <Grid container spacing={4} justifyContent="center" textAlign="center">
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
+            >
+              {t("home_page.servicios_lista.consultoria")}
+            </Typography>
+            <Box
+              component="img"
+              src={consultoria}
+              alt="Consultoría"
+              sx={{
+                width: "100%",
+                height: { xs: 300, md: 350 },
+                objectFit: "cover",
+                cursor: "pointer",
+                borderRadius: 2,
+              }}
+              onClick={() => navigate("/servicios/consultoria")}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
+            >
+              {t("home_page.servicios_lista.asesoria")}
+            </Typography>
+            <Box
+              component="img"
+              src={asesoria}
+              alt="Asesoría"
+              sx={{
+                width: "100%",
+                height: { xs: 300, md: 350 },
+                objectFit: "cover",
+                cursor: "pointer",
+                borderRadius: 2,
+              }}
+              onClick={() => navigate("/servicios/asesoria")}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={4}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
+            >
+              {t("home_page.servicios_lista.mentoria")}
+            </Typography>
+            <Box
+              component="img"
+              src={mentoria}
+              alt="Mentoría"
+              sx={{
+                width: "100%",
+                height: { xs: 300, md: 350 },
+                objectFit: "cover",
+                cursor: "pointer",
+                borderRadius: 2,
+              }}
+              onClick={() => navigate("/servicios/mentoria")}
+            />
+          </Grid>
+        </Grid>
       </Box>
 
-      <Grid container spacing={4} justifyContent="center" textAlign="center">
-        {/* Primer servicio */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-          >
-            {t("home_page.servicios_lista.consultoria")}
-          </Typography>
-          <Box
-            component="img"
-            src={maritimo}
-            alt="Maritimo"
-            sx={{
-              width: "100%",
-              height: { xs: 300, sm: 300, md: 350 },
-              objectFit: "cover",
-              cursor: "pointer",
-              borderRadius: 2,
-            }}
-            onClick={() => (window.location.href = "/servicios/consultoria")}
-          />
-        </Grid>
-        {/* Segundo servicio */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-          >
-            {t("home_page.servicios_lista.asesoria")}
-          </Typography>
-          <Box
-            component="img"
-            src={terrestre}
-            alt="Terrestre"
-            sx={{
-              width: "100%",
-              height: { xs: 300, sm: 300, md: 350 },
-              objectFit: "cover",
-              cursor: "pointer",
-              borderRadius: 2,
-            }}
-            onClick={() => (window.location.href = "/servicios/asesoria")}
-          />
-        </Grid>
-        {/* Tercer servicio */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-          >
-            {t("home_page.servicios_lista.mentoria")}
-          </Typography>
-          <Box
-            component="img"
-            src={aereo}
-            alt="Aereo"
-            sx={{
-              width: "100%",
-              height: { xs: 300, sm: 300, md: 350 },
-              objectFit: "cover",
-              cursor: "pointer",
-              borderRadius: 2,
-            }}
-            onClick={() => (window.location.href = "/servicios/mentoria")}
-          />
-        </Grid>
-      </Grid>
-
-      <Grid container spacing={4} sx={{ backgroundColor: "#1f7a8b", p: 1 }}>
-        {/* Primer contenedor */}
-        <Grid
-          item
-          xs={12}
-          md={4}
-          sx={{ px: { xs: 0, md: 0 }, mx: { xs: "auto", md: 0 } }}
-        >
-          <Box
-            component="img"
-            src={celular}
-            alt="celular"
-            sx={{
-              width: "100%",
-              height: { xs: 300, md: 550 },
-              objectFit: "cover",
-              borderRadius: 2,
-            }}
-          />
-        </Grid>
-        {/* Segundo contenedor */}
-        <Grid item xs={12} md={8}>
-          <Box
-            sx={{
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 2,
-              textAlign: { xs: "center", md: "left" },
-              p: { xs: 1, md: 0 },
-            }}
-          >
-            <Box sx={{ maxWidth: "800px" }}>
-              <Typography
-                variant="h5"
-                sx={{ fontWeight: "bold", color: "#fff", mb: 2 }}
-              >
-                {t("home_page.tecnologia_subtitulo")}
-              </Typography>
-              <Typography
-                variant="h3"
-                sx={{
-                  mb: 4,
-                  fontWeight: "bold",
-                  color: "#fff",
-                  fontSize: { xs: "1.8rem", md: "2.5rem" },
-                }}
-              >
-                {t("home_page.tecnologia_titulo")}
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 4, color: "#fff" }}>
-                {t("home_page.tecnologia_parrafo")}
-              </Typography>
-              <List sx={{ color: "#fff", pl: { xs: 0, md: 2 } }}>
-                <ListItem sx={{ p: 0, mb: 1 }}>
-                  <ListItemIcon sx={{ minWidth: 24, mr: 2 }}>
-                    <img src={viñeta} alt="icono" width="20" height="20" />
-                  </ListItemIcon>
-                  <ListItemText primary={t("home_page.tecnologia_lista_1")} />
-                </ListItem>
-
-                <ListItem sx={{ p: 0 }}>
-                  <ListItemIcon sx={{ minWidth: 24, mr: 2 }}>
-                    <img src={viñeta} alt="icono" width="20" height="20" />
-                  </ListItemIcon>
-                  <ListItemText primary={t("home_page.tecnologia_lista_2")} />
-                </ListItem>
-              </List>
-
-              <Button
-                variant="contained"
-                endIcon={<ArrowForwardIcon />}
-                sx={{
-                  borderRadius: 3,
-                  px: 3,
-                  py: 1.5,
-                  fontSize: "0.5 rem",
-                  background: "#1e3662",
-                  mt: 2,
-                }}
-                onClick={() => navigate("/nosotros")}
-              >
-                {t("home_page.tecnologia_boton")}
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Box sx={{ padding: 4, textAlign: "justify" }}>
+      {/* Beneficios */}
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 6 }}>
         <Typography
           variant="h4"
-          gutterBottom
           sx={{
-            fontWeight: "bold",
             color: "#1f7a8b",
+            fontWeight: "bold",
             textAlign: "center",
-            fontSize: { xs: "1.5rem", md: "2rem" },
+            mb: 4,
           }}
         >
           {t("home_page.beneficios_titulo")}
         </Typography>
+
+        <List sx={{ color: "#113a63", maxWidth: 800, mx: "auto" }}>
+          {[...Array(5)].map((_, i) => (
+            <ListItem key={i} sx={{ py: 0.5 }}>
+              <ListItemIcon sx={{ minWidth: 24 }}>
+                <img src={viñeta} alt="icono" width="18" height="18" />
+              </ListItemIcon>
+              <ListItemText
+                primary={t(`home_page.beneficios_lista.${i}`)}
+                sx={{ color: "#113a63" }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+
+      {/* Sectores */}
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 6, backgroundColor: "#f6f8fa" }}>
         <Typography
-          variant="h5"
-          gutterBottom
+          variant="h4"
           sx={{
-            fontWeight: "bold",
             color: "#113a63",
+            fontWeight: "bold",
             textAlign: "center",
-            mb: 2,
-            fontSize: { xs: "1.2rem", md: "1.5rem" },
+            mb: 4,
           }}
         >
-          {t("home_page.beneficios_subtitulo")}
+          {t("home_page.sectores_titulo")}
+        </Typography>
+
+        <Grid container spacing={2} justifyContent="center">
+          {[...Array(6)].map((_, i) => (
+            <Grid item xs={12} sm={6} md={4} key={i}>
+              <Typography
+                variant="body1"
+                sx={{
+                  textAlign: "center",
+                  fontWeight: "500",
+                  color: "#1f7a8b",
+                }}
+              >
+                {t(`home_page.sectores_lista.${i}`)}
+              </Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+
+      {/* Por qué elegirnos */}
+      <Box sx={{ px: { xs: 3, md: 10 }, py: 6 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            color: "#113a63",
+            fontWeight: "bold",
+            textAlign: "center",
+            mb: 3,
+          }}
+        >
+          {t("home_page.porque_elegirnos_titulo")}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: "#113a63", textAlign: "center" }}
+          sx={{
+            color: "#113a63",
+            textAlign: "justify",
+            maxWidth: 900,
+            mx: "auto",
+            fontSize: { xs: "1rem", md: "1.1rem" },
+          }}
         >
-          {t("home_page.beneficios_parrafo")}
+          {t("home_page.porque_elegirnos_texto")}
         </Typography>
       </Box>
 
+      {/* Llamado a la acción */}
       <Box
         sx={{
-          display: "flex",
-          gap: 4,
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
+          px: 4,
+          py: 8,
+          background: "#1f7a8b",
+          color: "white",
+          textAlign: "center",
         }}
       >
-        {[documentacionOperacion, despachoAduanal, fisicoMercancia].map(
-          (img, index) => (
-            <Box
-              key={index}
-              component="img"
-              src={img}
-              alt={`Contenedor ${index + 1}`}
-              sx={{
-                width: "100%",
-                maxWidth: "300px",
-                borderRadius: 3,
-                boxShadow: 3,
-                objectFit: "cover",
-                mx: { xs: 1, md: 2 },
-                my: { xs: 2, md: 0 },
-              }}
-            />
-          )
-        )}
-      </Box>
-
-      <Grid container spacing={4} sx={{ mt: 5, mb: 5, p: 2 }}>
-        {/* Primer contenedor */}
-        <Grid
-          item
-          xs={12}
-          md={4}
-          sx={{ px: { xs: 0, md: 0 }, mx: { xs: "auto", md: 0 } }}
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", mb: 2, fontSize: { xs: "1.5rem", md: "2rem" } }}
         >
-          <Box
-            component="img"
-            src={mundo}
-            alt="mundo"
-            sx={{
-              width: "100%",
-              height: { xs: 200, md: 350 },
-              objectFit: "cover",
-              borderRadius: 2,
-              display: "block",
-            }}
-          />
-        </Grid>
-        {/* Segundo contenedor */}
-        <Grid item xs={12} md={8}>
-          <Box
-            sx={{
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 2,
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            <Box sx={{ maxWidth: "800px" }}>
-              <Typography
-                variant="h4"
-                sx={{
-                  fontWeight: "bold",
-                  color: "#113a63",
-                  mb: 2,
-                  fontSize: { xs: "1.5rem", md: "2rem" },
-                }}
-              >
-                {t("home_page.mundo_titulo")}
-              </Typography>
-              <Typography
-                variant="h5"
-                sx={{
-                  mb: 4,
-                  fontWeight: "bold",
-                  color: "#113a63",
-                  fontSize: { xs: "1.2rem", md: "1.5rem" },
-                }}
-              >
-                {t("home_page.mundo_subtitulo")}
-              </Typography>
-              <List sx={{ color: "#113a63", pl: { xs: 0, md: 2 } }}>
-                <ListItem sx={{ p: 0 }}>
-                  <ListItemIcon sx={{ minWidth: 24 }}>
-                    <FiberManualRecordIcon
-                      sx={{ fontSize: 20, color: "#fff" }}
-                    />
-                  </ListItemIcon>
-                  <ListItemText primary={t("home_page.mundo_lista_1")} />
-                </ListItem>
-              </List>
-              <Button
-                variant="contained"
-                endIcon={<ArrowForwardIcon />}
-                sx={{
-                  borderRadius: 3,
-                  px: 3,
-                  py: 1.5,
-                  fontSize: "0.5 rem",
-                  background: "#1e3662",
-                  mt: 2,
-                }}
-                onClick={() => navigate("/contacto")}
-              >
-                {t("home_page.mundo_boton")}
-              </Button>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
+          {t("home_page.llamado_accion_titulo")}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mb: 4,
+            fontSize: { xs: "1rem", md: "1.2rem" },
+            maxWidth: 800,
+            mx: "auto",
+          }}
+        >
+          {t("home_page.llamado_accion_texto")}
+        </Typography>
+        <Button
+          variant="contained"
+          endIcon={<ArrowForwardIcon />}
+          sx={{
+            borderRadius: 3,
+            px: 3,
+            py: 1.5,
+            fontSize: "1rem",
+            background: "#113a63",
+          }}
+          onClick={() => navigate("/contacto")}
+        >
+          {t("home_page.llamado_accion_boton")}
+        </Button>
+      </Box>
     </Box>
   );
 }

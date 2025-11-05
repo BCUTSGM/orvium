@@ -1,19 +1,14 @@
 import { Box, Typography, Button } from "@mui/material";
-import fondo from "../../assets/maritimo/maritimo.png";
-import Maritimo1 from "../../assets/maritimo/maritimo-1.png";
-import Maritimo2 from "../../assets/maritimo/maritimo-2.png";
-import MaritimoHover from "../../assets/maritimo/maritimohover.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-
-export default function Maritimo() {
+export default function Asesoria() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = t("maritimo_page.meta_titulo");
+    document.title = t("asesoria_page.meta_titulo");
 
     let metaDesc = document.querySelector("meta[name='description']");
     if (!metaDesc) {
@@ -21,26 +16,25 @@ export default function Maritimo() {
       metaDesc.name = "description";
       document.head.appendChild(metaDesc);
     }
-    metaDesc.content = t("maritimo_page.meta_descripcion");
+    metaDesc.content = t("asesoria_page.meta_descripcion");
+
     let linkCanonical = document.querySelector("link[rel='canonical']");
     if (!linkCanonical) {
       linkCanonical = document.createElement("link");
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/servicios/maritimo";
+    linkCanonical.href = "https://www.orvium.com/servicios/asesoria";
   }, [t]);
 
   return (
     <Box>
+      {/* Encabezado principal */}
       <Box
         sx={{
-          backgroundImage: `url(${fondo})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundColor: "#113a63",
           width: "100vw",
-          height: { xs: "60vh", md: "100vh" },
+          height: { xs: "50vh", md: "70vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -56,10 +50,11 @@ export default function Maritimo() {
             textAlign: "center",
           }}
         >
-          {t("maritimo_page.titulo_principal")}
+          {t("asesoria_page.titulo_principal")}
         </Typography>
       </Box>
 
+      {/* Sección principal */}
       <Box sx={{ px: { xs: 2, md: 8 }, py: 4, textAlign: "justify" }}>
         <Typography
           variant="h3"
@@ -68,31 +63,59 @@ export default function Maritimo() {
             fontWeight: "bold",
             color: "#113a63",
             textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }
+            mb: 3,
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
           }}
         >
-          {t("maritimo_page.subtitulo")}
+          {t("asesoria_page.subtitulo")}
         </Typography>
+
         <Typography
-          variant="h5"
+          variant="h6"
+          sx={{
+            color: "#333",
+            textAlign: "center",
+            mb: 6,
+            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem" },
+          }}
+        >
+          {t("asesoria_page.descripcion_general")}
+        </Typography>
+
+        {/* Servicios */}
+        <Typography
+          variant="h4"
           gutterBottom
           sx={{
             fontWeight: "bold",
             color: "#113a63",
+            mt: 6,
+            mb: 3,
             textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" }
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.3rem" },
           }}
         >
-          {t("maritimo_page.garantia")}
+          {t("asesoria_page.servicios.titulo")}
         </Typography>
-        <Typography variant="body1" sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" }, mb: 6 }}>
-          <span style={{ fontWeight: "bold" }}>
-            {t("maritimo_page.parrafo_pregunta")}
-          </span>{" "}
-          {t("maritimo_page.parrafo_respuesta")}
+
+        <Typography
+          variant="body1"
+          sx={{ mb: 3, textAlign: "center", fontSize: { xs: "1rem", md: "1.1rem" } }}
+        >
+          {t("asesoria_page.servicios.descripcion")}
         </Typography>
+
+        <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
+          <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
+            <li>{t("asesoria_page.servicios.listado.empresas_clientes_proveedores")}</li>
+            <li>{t("asesoria_page.servicios.listado.directorio_empresas")}</li>
+            <li>{t("asesoria_page.servicios.listado.primer_contacto")}</li>
+            <li>{t("asesoria_page.servicios.listado.representacion_comercial")}</li>
+            <li>{t("asesoria_page.servicios.listado.acompanamiento")}</li>
+          </ul>
+        </Box>
+
+        {/* Valores agregados */}
         <Typography
           variant="h4"
           gutterBottom
@@ -101,87 +124,40 @@ export default function Maritimo() {
             color: "#113a63",
             textAlign: "center",
             mt: 8,
-            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" }
+            mb: 3,
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.3rem" },
           }}
         >
-          {t("maritimo_page.titulo_ofrecemos")}
+          {t("asesoria_page.valores_agregados.titulo")}
         </Typography>
-      </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          gap: 4,
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-      {[Maritimo1, Maritimo2].map((img, index) => (
-        <Box
-            key={index}
-            component="img"
-            src={img}
-            alt={`Contenedor ${index + 1}`}
+        <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
+          <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
+            {t("asesoria_page.valores_agregados.puntos", { returnObjects: true }).map(
+              (punto, index) => (
+                <li key={index}>{punto}</li>
+              )
+            )}
+          </ul>
+        </Box>
+
+        {/* Botón de contacto */}
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
+          <Button
+            variant="contained"
             sx={{
-              width: "100%",
-              maxWidth: "300px",
               borderRadius: 3,
-              boxShadow: 3,
-              objectFit: "cover",
-              mx: { xs: 1, md: 2 },
-              my: { xs: 1, md: 0 },
+              px: { xs: 3, md: 4 },
+              py: { xs: 1.2, md: 1.5 },
+              fontSize: { xs: "0.9rem", sm: "1.1rem" },
+              background: "#1f7a8b",
             }}
-          />
-        ))}
+            onClick={() => navigate("/contacto")}
+          >
+            {t("global.boton_contacto", "Contáctanos")}
+          </Button>
+        </Box>
       </Box>
-
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
-        <Button
-          variant="contained"
-          sx={{
-            borderRadius: 3,
-            px: { xs: 3, md: 4 },
-            py: { xs: 1.2, md: 1.5 },
-            fontSize: { xs: "0.9rem", sm: "1.1rem" },
-            background: "#e85252",
-          }}
-          onClick={() => navigate("/contacto")}
-        >
-          {t("maritimo_page.boton_cotizar")}
-        </Button>
-      </Box>
-
-      <Box sx={{ padding: 4, textAlign: "justify", px: { xs: 2, md: 8 }, py: 4 }}>
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mt: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {t("maritimo_page.frase_final")}
-        </Typography>
-      </Box>
-
-      <Box
-        sx={{
-          backgroundImage: `url(${MaritimoHover})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          minHeight: { xs: "20vh", md: "80vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 2
-        }}
-      ></Box>
     </Box>
   );
 }

@@ -1,18 +1,14 @@
-import Imagen from "../../assets/aereo/avion-portada.png";
-import ImagenExport from "../../assets/aereo/flete-exportacion.png";
-import ImagenImport from "../../assets/aereo/flete-importacion.png";
-import AeroService from "../../assets/aereo/hover.png";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, List, ListItem, ListItemText } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Aereo() {
+export default function Consultoria() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = t("aereo_page.meta_titulo");
+    document.title = t("consultoria_page.meta_titulo");
 
     let metaDesc = document.querySelector("meta[name='description']");
     if (!metaDesc) {
@@ -20,21 +16,23 @@ export default function Aereo() {
       metaDesc.name = "description";
       document.head.appendChild(metaDesc);
     }
-    metaDesc.content = t("aereo_page.meta_descripcion");
+    metaDesc.content = t("consultoria_page.meta_descripcion");
+
     let linkCanonical = document.querySelector("link[rel='canonical']");
     if (!linkCanonical) {
       linkCanonical = document.createElement("link");
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/servicios/aereo";
+    linkCanonical.href = "https://www.orvium.com/servicios/consultoria";
   }, [t]);
 
   return (
     <Box>
+      {/* Encabezado */}
       <Box
         sx={{
-          backgroundImage: `url(${Imagen})`,
+          backgroundColor:"#1f7a8b",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -55,10 +53,11 @@ export default function Aereo() {
             textAlign: "center",
           }}
         >
-          {t("aereo_page.titulo_principal")}
+          {t("consultoria_page.titulo_principal")}
         </Typography>
       </Box>
 
+      {/* Descripción general */}
       <Box sx={{ px: { xs: 2, md: 8 }, py: 4, textAlign: "justify" }}>
         <Typography
           variant="h3"
@@ -71,30 +70,22 @@ export default function Aereo() {
             fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
           }}
         >
-          {t("aereo_page.subtitulo")}
+          {t("consultoria_page.subtitulo")}
         </Typography>
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {t("aereo_page.garantia")}
-        </Typography>
+
         <Typography
           variant="body1"
-          sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" }, mb: 6 }}
+          gutterBottom
+          sx={{
+            fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
+            mb: 6,
+            textAlign: "justify",
+          }}
         >
-          <span style={{ fontWeight: "bold" }}>
-            {t("aereo_page.parrafo_pregunta")}
-          </span>{" "}
-          {t("aereo_page.parrafo_respuesta")}
+          {t("consultoria_page.descripcion_general")}
         </Typography>
+
+        {/* Diagnóstico */}
         <Typography
           variant="h4"
           gutterBottom
@@ -103,89 +94,105 @@ export default function Aereo() {
             color: "#113a63",
             textAlign: "center",
             mt: 8,
-            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+            fontSize: { xs: "1.4rem", sm: "1.8rem", md: "2.2rem" },
           }}
         >
-          {t("aereo_page.titulo_ofrecemos")}
+          {t("consultoria_page.diagnostico.titulo")}
         </Typography>
-      </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          gap: 4,
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        {[ImagenExport, ImagenImport].map((img, index) => (
-          <Box
-            key={index}
-            component="img"
-            src={img}
-            alt={`Contenedor ${index + 1}`}
-            sx={{
-              width: "100%",
-              maxWidth: "300px",
-              borderRadius: 3,
-              boxShadow: 3,
-              objectFit: "cover",
-              mx: { xs: 1, md: 2 },
-              my: { xs: 1, md: 0 },
-            }}
-          />
-        ))}
-      </Box>
-
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
-        <Button
-          variant="contained"
-          sx={{
-            borderRadius: 3,
-            px: { xs: 3, md: 4 },
-            py: { xs: 1.2, md: 1.5 },
-            fontSize: { xs: "0.9rem", sm: "1.1rem" },
-            background: "#e85252",
-          }}
-          onClick={() => navigate("/contacto")}
-        >
-          {t("aereo_page.boton_cotizar")}
-        </Button>
-      </Box>
-
-      <Box
-        sx={{ padding: 4, textAlign: "justify", px: { xs: 2, md: 8 }, py: 4 }}
-      >
         <Typography
-          variant="h5"
+          variant="body1"
+          sx={{
+            fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
+            mb: 4,
+            textAlign: "justify",
+          }}
+        >
+          {t("consultoria_page.diagnostico.descripcion")}
+        </Typography>
+
+        <List sx={{ pl: { xs: 2, md: 6 } }}>
+          {[
+            "producto",
+            "mercado",
+            "capacidad_produccion",
+            "organizacion_administrativa_tecnologica",
+            "cadena_distribucion",
+            "finanzas",
+            "alianzas_estrategicas",
+            "viabilidad_tecnica_financiera",
+          ].map((key, index) => (
+            <ListItem key={index} sx={{ py: 0.5 }}>
+              <ListItemText
+                primaryTypographyProps={{
+                  fontSize: { xs: "0.95rem", sm: "1rem" },
+                  textAlign: "justify",
+                }}
+                primary={`• ${t(`consultoria_page.diagnostico.analisis.${key}`)}`}
+              />
+            </ListItem>
+          ))}
+        </List>
+
+        {/* Estrategias */}
+        <Typography
+          variant="h4"
           gutterBottom
           sx={{
             fontWeight: "bold",
             color: "#113a63",
             textAlign: "center",
-            mt: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+            mt: 8,
+            fontSize: { xs: "1.4rem", sm: "1.8rem", md: "2.2rem" },
           }}
         >
-          {t("aereo_page.frase_final")}
+          {t("consultoria_page.estrategias.titulo")}
         </Typography>
-      </Box>
 
-      <Box
-        sx={{
-          backgroundImage: `url(${AeroService})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          minHeight: { xs: "20vh", md: "80vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 2,
-        }}
-      ></Box>
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
+            mb: 4,
+            textAlign: "justify",
+          }}
+        >
+          {t("consultoria_page.estrategias.descripcion")}
+        </Typography>
+
+        <List sx={{ pl: { xs: 2, md: 6 } }}>
+          {t("consultoria_page.estrategias.puntos", { returnObjects: true }).map(
+            (punto, index) => (
+              <ListItem key={index} sx={{ py: 0.5 }}>
+                <ListItemText
+                  primaryTypographyProps={{
+                    fontSize: { xs: "0.95rem", sm: "1rem" },
+                    textAlign: "justify",
+                  }}
+                  primary={`• ${punto}`}
+                />
+              </ListItem>
+            )
+          )}
+        </List>
+
+        {/* Botón de contacto */}
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: 3,
+              px: { xs: 3, md: 4 },
+              py: { xs: 1.2, md: 1.5 },
+              fontSize: { xs: "0.9rem", sm: "1.1rem" },
+              background: "#1f7a8b",
+            }}
+            onClick={() => navigate("/contacto")}
+          >
+            {t("boton_contacto", "Contáctanos")}
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 }

@@ -1,18 +1,14 @@
 import { Box, Typography, Button } from "@mui/material";
-import fondo from "../../assets/terrestre/terrestre.png";
-import terrestreftl from "../../assets/terrestre/terrestre-ftl.png";
-import terrestreltl from "../../assets/terrestre/terrestre-ltl.png";
-import contenedorftl from "../../assets/terrestre/contenedor-ftl.png";
-import terrestreBody from "../../assets/terrestre/hover.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-export default function Terrestre() {
+
+export default function Mentoria() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = t("terrestre_page.meta_titulo");
+    document.title = t("mentoria_page.meta_titulo");
 
     let metaDesc = document.querySelector("meta[name='description']");
     if (!metaDesc) {
@@ -20,7 +16,7 @@ export default function Terrestre() {
       metaDesc.name = "description";
       document.head.appendChild(metaDesc);
     }
-    metaDesc.content = t("terrestre_page.meta_descripcion");
+    metaDesc.content = t("mentoria_page.meta_descripcion");
 
     let linkCanonical = document.querySelector("link[rel='canonical']");
     if (!linkCanonical) {
@@ -28,19 +24,17 @@ export default function Terrestre() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/servicios/terrestre";
+    linkCanonical.href = "https://www.cslogix.com/servicios/mentoria";
   }, [t]);
 
   return (
     <Box>
+      {/* Encabezado */}
       <Box
         sx={{
-          backgroundImage: `url(${fondo})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundColor: "#113a63",
           width: "100vw",
-          height: { xs: "60vh", md: "100vh" },
+          height: { xs: "50vh", md: "80vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -55,92 +49,142 @@ export default function Terrestre() {
             textAlign: "center",
           }}
         >
-          {t("terrestre_page.titulo_principal")}
+          {t("mentoria_page.titulo_principal")}
         </Typography>
       </Box>
 
-      {/* Contenido principal */}
-      <Box sx={{ px: { xs: 2, md: 6 }, py: 4, textAlign: "justify" }}>
+      {/* Descripción inicial */}
+      <Box sx={{ px: { xs: 2, md: 8 }, py: 6, textAlign: "justify" }}>
         <Typography
           variant="h3"
-          gutterBottom
           sx={{
             fontWeight: "bold",
             color: "#113a63",
             textAlign: "center",
-            mb: 4,
+            mb: 3,
             fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
           }}
         >
-          {t("terrestre_page.subtitulo")}
-        </Typography>
-
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {t("terrestre_page.garantia")}
+          {t("mentoria_page.subtitulo")}
         </Typography>
 
         <Typography
           variant="body1"
-          sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" }, mb: 6 }}
+          sx={{ fontSize: { xs: "1rem", md: "1.1rem" }, mb: 6 }}
         >
-          <span style={{ fontWeight: "bold" }}>
-            {t("terrestre_page.parrafo_pregunta")}
-          </span>{" "}
-          {t("terrestre_page.parrafo_respuesta")}
+          {t("mentoria_page.descripcion")}
         </Typography>
+      </Box>
+
+      {/* Programa de Aceleramiento */}
+      <Box sx={{ px: { xs: 2, md: 8 }, py: 4 }}>
         <Typography
           variant="h4"
-          gutterBottom
           sx={{
             fontWeight: "bold",
             color: "#113a63",
+            mb: 2,
             textAlign: "center",
-            mt: 6,
-            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
           }}
         >
-          {t("terrestre_page.titulo_ofrecemos")}
+          {t("mentoria_page.programa_aceleramiento.titulo")}
         </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{ mb: 3, textAlign: "justify", fontSize: { xs: "1rem", md: "1.1rem" } }}
+        >
+          {t("mentoria_page.programa_aceleramiento.objetivo")}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#113a63", mb: 1 }}
+        >
+          Modelo:
+        </Typography>
+        <ul style={{ marginLeft: "1.5rem" }}>
+          {t("mentoria_page.programa_aceleramiento.modelo", { returnObjects: true }).map(
+            (item, index) => (
+              <li key={index} style={{ marginBottom: "0.5rem" }}>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
+
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#113a63", mt: 3 }}
+        >
+          Resultados esperados:
+        </Typography>
+        <ul style={{ marginLeft: "1.5rem" }}>
+          {t("mentoria_page.programa_aceleramiento.resultados", { returnObjects: true }).map(
+            (item, index) => (
+              <li key={index} style={{ marginBottom: "0.5rem" }}>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
       </Box>
 
-      <Box
-        sx={{
-          display: "flex",
-          gap: 4,
-          alignItems: "center",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        {[terrestreftl, terrestreltl, contenedorftl].map((img, index) => (
-          <Box
-            key={index}
-            component="img"
-            src={img}
-            alt={`Contenedor ${index + 1}`}
-            sx={{
-              width: "100%",
-              maxWidth: "300px",
-              borderRadius: 3,
-              boxShadow: 3,
-              objectFit: "cover",
-              mx: { xs: 1, md: 2 },
-              my: { xs: 1, md: 0 },
-            }}
-          />
-        ))}
+      {/* Programa de Incubación */}
+      <Box sx={{ px: { xs: 2, md: 8 }, py: 4 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            color: "#113a63",
+            mb: 2,
+            textAlign: "center",
+          }}
+        >
+          {t("mentoria_page.programa_incubacion.titulo")}
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{ mb: 3, textAlign: "justify", fontSize: { xs: "1rem", md: "1.1rem" } }}
+        >
+          {t("mentoria_page.programa_incubacion.descripcion")}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#113a63", mb: 1 }}
+        >
+          Modelo:
+        </Typography>
+        <ul style={{ marginLeft: "1.5rem" }}>
+          {t("mentoria_page.programa_incubacion.modelo", { returnObjects: true }).map(
+            (item, index) => (
+              <li key={index} style={{ marginBottom: "0.5rem" }}>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
+
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#113a63", mt: 3 }}
+        >
+          Resultados esperados:
+        </Typography>
+        <ul style={{ marginLeft: "1.5rem" }}>
+          {t("mentoria_page.programa_incubacion.resultados", { returnObjects: true }).map(
+            (item, index) => (
+              <li key={index} style={{ marginBottom: "0.5rem" }}>
+                {item}
+              </li>
+            )
+          )}
+        </ul>
       </Box>
 
+      {/* Botón de contacto */}
       <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
         <Button
           variant="contained"
@@ -148,47 +192,14 @@ export default function Terrestre() {
             borderRadius: 3,
             px: { xs: 3, md: 4 },
             py: { xs: 1.2, md: 1.5 },
-            fontSize: { xs: "0.9rem", md: "1.1rem" },
-            background: "#e85252",
+            fontSize: { xs: "0.9rem", sm: "1.1rem" },
+            background: "#1f7a8b",
           }}
           onClick={() => navigate("/contacto")}
         >
-          {t("terrestre_page.boton_cotizar")}
+          {t("global.boton_contacto", "Contáctanos")}
         </Button>
       </Box>
-
-      <Box
-        sx={{ padding: 4, textAlign: "justify", px: { xs: 2, md: 8 }, py: 4 }}
-      >
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mt: 4,
-            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {t("terrestre_page.frase_final")}
-        </Typography>
-      </Box>
-
-      <Box
-        sx={{
-          backgroundImage: `url(${terrestreBody})`,
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          minHeight: { xs: "20vh", md: "80vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 2,
-        }}
-      ></Box>
     </Box>
   );
 }

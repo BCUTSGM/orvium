@@ -16,25 +16,47 @@
     },
     "home_page": {
         "meta_titulo": "Orvium - Internacionalización de Negocios",
-        "meta_descripcion": "Consultoría, asesoría y mentoría para impulsar la internacionalización de empresas y proyectos globales.",
+        "meta_descripcion": "Consultoría, asesoría y mentoría especializadas para impulsar la internacionalización, competitividad y expansión global de tu empresa.",
         "titulo_principal": "ORVIUM",
-        "subtitulo": "Servicios para optimizar la integración mundial (internacionalización) de negocios",
-        "boton_contacto": "Contactanos",
+        "subtitulo": "Servicios estratégicos para optimizar la integración mundial de negocios",
+        "boton_contacto": "Contáctanos",
         "quienes_somos_titulo": "Quiénes Somos",
-        "quienes_somos_texto": "Somos un equipo interdisciplinario operando en diversos ámbitos del comercio internacional. Ofrecemos consultoría y asesoría para definir, estructurar, valorar la viabilidad técnico-financiera e implementar iniciativas de internacionalización de negocios.",
+        "quienes_somos_texto": "Somos un equipo interdisciplinario con amplia experiencia en comercio internacional, finanzas, marketing y desarrollo empresarial. En ORVIUM acompañamos a las empresas en su proceso de internacionalización, desde la evaluación de su oferta exportable hasta la implementación de estrategias de expansión en nuevos mercados. Nuestra misión es convertir tus ideas en oportunidades globales concretas.",
         "servicios_titulo": "Nuestros Servicios",
         "servicios_lista": {
             "consultoria": "Consultoría",
             "asesoria": "Asesoría",
             "mentoria": "Mentoría"
-        }
+        },
+        "beneficios_titulo": "Beneficios de trabajar con nosotros",
+        "beneficios_lista": [
+            "Acceso a información de mercado y oportunidades internacionales actualizadas",
+            "Diseño de estrategias personalizadas según la madurez exportadora de tu empresa",
+            "Red de contactos y alianzas estratégicas en mercados clave",
+            "Acompañamiento integral durante todas las fases del proceso de internacionalización",
+            "Optimización de la logística, comercialización y gestión financiera internacional"
+        ],
+        "sectores_titulo": "Sectores con los que trabajamos",
+        "sectores_lista": [
+            "Agroindustria y alimentos",
+            "Textil, moda y diseño",
+            "Tecnología e innovación",
+            "Servicios profesionales y consultoría",
+            "Industria manufacturera y automotriz",
+            "Energías renovables y medio ambiente"
+        ],
+        "porque_elegirnos_titulo": "¿Por qué elegir ORVIUM?",
+        "porque_elegirnos_texto": "Nos distinguimos por brindar soluciones estratégicas adaptadas a cada cliente. No solo orientamos, sino que implementamos acciones concretas con resultados medibles. Nuestra metodología combina análisis técnico, visión de mercado y experiencia práctica para garantizar una expansión internacional sostenible y rentable.",
+        "llamado_accion_titulo": "Expande tu negocio al mundo",
+        "llamado_accion_texto": "Te acompañamos en cada paso hacia la internacionalización: desde el diagnóstico inicial hasta la consolidación de tu presencia global. Juntos podemos hacer que tus productos y servicios crucen fronteras.",
+        "llamado_accion_boton": "Solicita una reunión"
     },
     "nosotros_page": {
         "meta_titulo": "Quiénes Somos - ORVIUM",
         "meta_descripcion": "En ORVIUM somos un equipo interdisciplinario enfocado en impulsar la internacionalización de negocios mediante consultoría, asesoría y mentoría especializadas.",
         "titulo_principal": "Quiénes Somos",
         "subtitulo": "Expertos en internacionalización de negocios y expansión global",
-        "descripcion": "ORVIUM es una organización dedicada a fortalecer las capacidades de las empresas y emprendedores para integrarse en los mercados internacionales. Contamos con un equipo multidisciplinario con experiencia en comercio exterior, finanzas, derecho, marketing y gestión tecnológica.",
+        "descripcion": "Un equipo interdisciplinario operando en diversos ámbitos del comercio internacional, lo que nos permite ofrecer servicios de consultoría y asesoría para definir, estructurar, valorar la viabilidad técnico-financiera e implementar iniciativas de internacionalización de negocios. ",
         "mision": {
             "titulo": "Misión",
             "texto": "Brindar soluciones integrales para la internacionalización de empresas y proyectos, promoviendo su competitividad y sostenibilidad en los mercados globales."
@@ -67,115 +89,133 @@
         "meta_descripcion": "Evaluamos la oferta exportable, la viabilidad técnica y financiera para lograr la internacionalización exitosa de tu negocio.",
         "titulo_principal": "Consultoría",
         "subtitulo": "Diagnóstico y planeación para competir globalmente",
-        "descripcion": "Revisamos en forma diagnóstica la iniciativa de exportación para detectar si los productos y la gestión del proceso tienen las condiciones necesarias para competir en los mercados seleccionados.",
-        "analisis": {
-            "producto": "Características técnicas y mercadológicas",
-            "mercado": "Demanda, competencia y mecanismos de comercialización, incluyendo empaque y embalaje",
-            "produccion": "Tamaño, proceso y costos de producción",
-            "organizacion": "Gestión administrativa y tecnológica para mercados internacionales",
-            "distribucion": "Cadena de distribución internacional",
-            "finanzas": "Capacidad o requerimientos financieros",
-            "alianzas": "Alianzas estratégicas y viabilidad técnica-financiera"
+        "descripcion_general": "Se revisa en forma diagnóstica la iniciativa de exportación. El propósito es detectar si los productos y la gestión del proceso de exportación tienen las condiciones para lograr competir en los mercados seleccionados.",
+        "diagnostico": {
+            "titulo": "Diagnóstico de oferta exportable",
+            "descripcion": "Analizamos la capacidad de la empresa y sus productos para competir en mercados internacionales considerando los siguientes aspectos:",
+            "analisis": {
+                "producto": "Características técnicas y mercadológicas del producto.",
+                "mercado": "Demanda, competencia y mecanismos de comercialización, incluyendo empaque y embalaje.",
+                "capacidad_produccion": "Tamaño, proceso de producción y costos.",
+                "organizacion_administrativa_tecnologica": "Estructura administrativa y tecnológica para la gestión de mercados internacionales.",
+                "cadena_distribucion": "Evaluación de la cadena de distribución internacional.",
+                "finanzas": "Capacidad o requerimientos financieros.",
+                "alianzas_estrategicas": "Identificación de alianzas estratégicas.",
+                "viabilidad_tecnica_financiera": "Análisis de viabilidad técnica y financiera."
+            }
         },
         "estrategias": {
             "titulo": "Estrategias en Exportación o Importación",
-            "texto": "Diseñamos un plan de acción a largo plazo con acciones de corto plazo, identificando mecanismos de implementación y viabilidad técnico-financiera para:",
+            "descripcion": "Se integran opciones de información que permiten diseñar un plan de acción a largo plazo con acciones de corto plazo, identificando mecanismos de implementación y viabilidad técnico-financiera para:",
             "puntos": [
-                "Definir opciones en regulaciones arancelarias y no arancelarias",
-                "Identificar mercados potenciales y mecanismos de comercialización",
-                "Estructurar la cadena logística seleccionando transportes y rutas pertinentes",
-                "Poner en marcha la estrategia de internacionalización"
+                "Definir las mejores opciones en materia de regulaciones arancelarias y no arancelarias.",
+                "Identificar mercados potenciales, incluyendo mecanismos de comercialización.",
+                "Estructurar la cadena logística seleccionando transportes y rutas pertinentes.",
+                "Poner en marcha la estrategia de internacionalización."
             ]
         }
     },
     "asesoria_page": {
         "meta_titulo": "Asesoría - ORVIUM",
-        "meta_descripcion": "Ofrecemos información estratégica para optimizar tus procesos de internacionalización mediante asesoría personalizada.",
+        "meta_descripcion": "Brindamos asesoría estratégica para impulsar la internacionalización de tu empresa mediante información, contactos y acompañamiento personalizado.",
         "titulo_principal": "Asesoría",
-        "subtitulo": "Información valiosa para la expansión global de tu negocio",
-        "descripcion": "Nuestros servicios de asesoría aportan valor a tus procesos de internacionalización mediante:",
-        "servicios": [
-            "Listado de empresas clientes y/o proveedores en el mercado de tu interés",
-            "Directorio de empresas internacionales con domicilios y datos de contacto",
-            "Primer contacto de negocios (videollamada o presencial)",
-            "Representación comercial para promover tus exportaciones o importaciones",
-            "Acompañamiento en el diseño, desarrollo o implementación de tu plan de expansión"
-        ],
-        "nota": "En todos nuestros servicios se identifican áreas de oportunidad, se sugieren e implementan mejoras. Los servicios pueden contratarse en conjunto o por temática, ajustándose a tus requerimientos."
+        "subtitulo": "Información, contactos y acompañamiento estratégico para expandir tu negocio globalmente",
+        "descripcion_general": "Nuestros servicios de asesoría ofrecen información valiosa para aportar valor a los procesos de internacionalización de tu empresa, facilitando la toma de decisiones y el crecimiento en nuevos mercados.",
+        "servicios": {
+            "titulo": "Servicios de Asesoría Internacional",
+            "descripcion": "Apoyamos a las empresas en cada etapa de su expansión internacional mediante los siguientes servicios:",
+            "listado": {
+                "empresas_clientes_proveedores": "Listado de empresas clientes y/o proveedores: Relación de empresas identificadas en el mercado de tu interés.",
+                "directorio_empresas": "Directorio de empresas internacionales: Incluye domicilios y datos de contacto disponibles después de una investigación secundaria más precisa.",
+                "primer_contacto": "Primer contacto de negocios: Concretamos una primera reunión con el cliente potencial, ya sea mediante videollamada o de forma presencial.",
+                "representacion_comercial": "Representación comercial: Eficientamos la promoción de tus negocios de exportación o importación en los mercados propuestos.",
+                "acompanamiento": "Acompañamiento integral: Asesoramos en cualquier fase del diseño, desarrollo o implementación de tu plan de expansión global, optimizando resultados con soluciones a la medida."
+            }
+        },
+        "valores_agregados": {
+            "titulo": "Valor Agregado de Nuestros Servicios",
+            "puntos": [
+                "Identificación de áreas de oportunidad con propuestas e implementación de mejoras.",
+                "Flexibilidad: los servicios pueden contratarse en su conjunto o por temática según tus necesidades.",
+                "Evaluación inicial de expectativas empresariales para ofrecer soluciones adecuadas y personalizadas."
+            ]
+        }
     },
     "mentoria_page": {
         "meta_titulo": "Mentoría - ORVIUM",
         "meta_descripcion": "Programas de mentoría personalizados para acelerar la internacionalización y conectar con fuentes de financiamiento.",
         "titulo_principal": "Mentoría",
         "subtitulo": "Acompañamiento experto para impulsar tu expansión global",
-        "descripcion": "Identificamos las áreas de oportunidad de tu proyecto de internacionalización y te brindamos mentoría, consultoría o acompañamiento a la medida, incluyendo acceso a financiamiento.",
+        "descripcion": "Identificamos, precisamos o ratificamos las áreas de oportunidad de tu proyecto de internacionalización, brindándote mentoría, consultoría o acompañamiento a la medida para concretar tus expectativas y acercarte a fuentes de financiamiento para soportar tu emprendimiento.",
         "programa_aceleramiento": {
             "titulo": "Aceleramiento (10 semanas)",
-            "objetivo": "Dar valor, enriquecer la experiencia operativa de la empresa o proyecto y definir un plan de acción para aprovechar oportunidades de negocio.",
+            "objetivo": "Dar valor, enriquecer la experiencia operativa de la empresa o del proyecto de internacionalización, y definir un plan de acción para aprovechar oportunidades de negocio, identificando los ajustes en producto, proceso de fabricación, gestión de la innovación, estructura administrativa, operativa o financiera, así como las inversiones y gastos necesarios para el logro del propósito.",
             "modelo": [
-                "Diagnóstico integral Ex Ante",
-                "Valoración de procesos o productos innovadores",
-                "Plan de aceleramiento con acciones técnicas, financieras y legales",
-                "Mentoría de seguimiento a plan de acción",
-                "Mentoría personalizada con expertos",
-                "Evaluación financiera y fuentes de financiamiento",
-                "Mentoría de gestión, pitch y presentación ante inversionistas",
-                "Acompañamiento ex post a 30 y 60 días"
+                "Diagnóstico Integral Ex Ante. Evalúa hallazgos en función de propósitos.",
+                "Valoración de procesos de innovación de procesos o productos propuestos.",
+                "Plan de aceleramiento con acciones acotadas en temas de mercado, técnicos, financieros, administrativos, legales y de gestión estratégica.",
+                "Mentoría de seguimiento a plan de acción.",
+                "Mentoría a la medida con expertos para formación y obtención de soluciones conjuntas.",
+                "Evaluación financiera y determinación de entrada y salida de capitales.",
+                "Identificación de fuentes de financiamiento.",
+                "Mentoría de gestión.",
+                "Mentoría pitch y presentación en pasarela de inversionistas.",
+                "Acompañamiento ex post a los 30 y 60 días posteriores a la conclusión del programa."
             ],
             "resultados": [
-                "Acceso efectivo a mercados internacionales",
-                "Maximización del talento empresarial",
-                "Minimización de riesgos internacionales",
-                "Acceso a opciones de financiamiento",
-                "Networking internacional"
+                "Precisión y operación efectiva de acceso a mercados internacionales.",
+                "Maximización del talento empresarial y de gestión.",
+                "Orientación estratégica para minimizar riesgos en operaciones internacionales.",
+                "Opciones de financiamiento y capital.",
+                "Networking internacional focalizado."
             ]
         },
         "programa_incubacion": {
             "meta_titulo": "Incubación - ORVIUM",
-            "meta_descripcion": "Transformamos ideas con potencial internacional en empresas listas para integrarse a cadenas globales de valor.",
+            "meta_descripcion": "Transformamos ideas con potencial internacional en empresas listas para integrarse a cadenas globales de valor internacionales.",
             "titulo": "Incubación (16 semanas)",
             "subtitulo": "De la idea al mercado global",
-            "descripcion": "Ofrecemos convertir ideas con potencial internacional en empresas operativas listas para integrarse en cadenas globales de valor.",
+            "descripcion": "Ofrecemos convertir ideas con potencial internacional en empresas operativas listas para integrarse en cadenas globales de valor internacionales.",
             "modelo": [
-                "Validación del modelo de negocio (CANVAS)",
-                "Planeación estratégica comercial internacional (visión, misión, objetivos)",
-                "Desarrollo del producto o servicio (PMV)",
-                "Elaboración de plan de negocios (mercado, técnico, financiero)",
-                "Evaluación de viabilidad técnico-financiera",
-                "Cumplimiento legal y logístico",
-                "Presentación final ante aliados y fuentes de financiamiento"
+                "Validación del modelo de negocio. Valoración propositiva de la propuesta o idea de negocio. Definir CANVAS.",
+                "Planeación Estratégica Comercial Internacional. Visión, misión, objetivos y lineamientos estratégicos de largo plazo con acciones de corto plazo.",
+                "Desarrollo del producto o servicio (PMV). Construcción de propuesta básica para identificar el encaje producto-mercado.",
+                "Plan de negocios. Aborda aspectos de mercado, técnicos, financieros y organizativos: oferta, demanda, precios, comercialización, capacidad de producción, estructura de gestión, determinación de costos, proyecciones y evaluación financiera.",
+                "Viabilidad técnico-financiera.",
+                "Cumplimiento legal y logístico.",
+                "Presentación final ante aliados y fuentes de financiamiento."
             ],
             "resultados": [
-                "Plan de negocio integral",
-                "Producto mínimo viable",
-                "Herramientas para ajustar el modelo de negocio",
-                "Asesoría en planeación y seguimiento del impacto",
-                "Verificación de objetivos operativos y financieros",
-                "Acceso a fuentes de financiamiento y redes de apoyo",
-                "Mentoría ex post"
+                "Plan de negocio integral.",
+                "Producto Mínimo Viable.",
+                "Herramientas para evaluar y ajustar el modelo de negocio.",
+                "Asesoría y acompañamiento en planeación y seguimiento del impacto.",
+                "Verificación de objetivos en producción, mercadotecnia, finanzas y recursos humanos.",
+                "Acercamiento a fuentes de financiamiento y redes de apoyo.",
+                "Asesoría y mentoría ex post (tras la incubación)."
             ]
         }
     },
     "contacto_page": {
-    "meta_titulo": "Contacto - cslogix",
-    "meta_descripcion": "Ponte en contacto con cslogix para recibir asesoría en logística internacional y gestión aduanera.",
-    "titulo_formulario": "Contáctenos",
-    "campo_nombre": "Nombre",
-    "campo_email": "Email",
-    "campo_empresa": "Empresa",
-    "campo_mensaje": "Mensaje",
-    "error_campos_vacios": " Por favor completa todos los campos para enviar el formulario.",
-    "boton_enviar": "ENVIAR",
-    "alerta_exito": " Mensaje enviado con éxito",
-    "alerta_error": " Hubo un error al enviar el mensaje",
-    "titulo_llamanos": "LLÁMANOS",
-    "titulo_correo": "CORREO ELECTRÓNICO",
-    "titulo_localizacion": "LOCALIZACIÓN",
-    "direccion_linea1": "Carretera Federal libre Puebla, 11 5 1027,",
-    "direccion_linea2": "90880 Tenancingo, Tlax., México",
-    "titulo_servicios": "NUESTROS MEJORES SERVICIOS",
-    "servicio_consultoria": "Consultoria",
-    "servicio_asesoria": "Asesoria",
-    "servicio_mentoria": "Mentoria"
+        "meta_titulo": "Contacto - cslogix",
+        "meta_descripcion": "Ponte en contacto con cslogix para recibir asesoría en logística internacional y gestión aduanera.",
+        "titulo_formulario": "Contáctenos",
+        "campo_nombre": "Nombre",
+        "campo_email": "Email",
+        "campo_empresa": "Empresa",
+        "campo_mensaje": "Mensaje",
+        "error_campos_vacios": " Por favor completa todos los campos para enviar el formulario.",
+        "boton_enviar": "ENVIAR",
+        "alerta_exito": " Mensaje enviado con éxito",
+        "alerta_error": " Hubo un error al enviar el mensaje",
+        "titulo_llamanos": "LLÁMANOS",
+        "titulo_correo": "CORREO ELECTRÓNICO",
+        "titulo_localizacion": "LOCALIZACIÓN",
+        "direccion_linea1": "Carretera Federal libre Puebla, 11 5 1027,",
+        "direccion_linea2": "90880 Tenancingo, Tlax., México",
+        "titulo_servicios": "NUESTROS MEJORES SERVICIOS",
+        "servicio_consultoria": "Consultoria",
+        "servicio_asesoria": "Asesoria",
+        "servicio_mentoria": "Mentoria"
     }
 }

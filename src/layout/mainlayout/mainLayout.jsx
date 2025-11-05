@@ -103,14 +103,14 @@ export default function MainLayout() {
       >
         {t('navbar.nosotros')}
       </Button>
-      <Button
+      {/* <Button
         component={Link}
         to="/blog"
         color="inherit"
         onClick={toggleDrawer(false)}
       >
         {t('navbar.blog')}
-      </Button>
+      </Button> */}
       <Button
         component={Link}
         to="/contacto"
