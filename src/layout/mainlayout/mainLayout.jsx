@@ -23,7 +23,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import logo from "../../assets/CSLogixBN.png";
+import logo from "../../assets/orvium.png";
 import ScrollToTop from "../scrollToTop"
 import Translate from "../mainlayout/translate"
 import BotpressChat from "./bootpressChat";
@@ -65,33 +65,33 @@ export default function MainLayout() {
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         <MenuItem
           component={Link}
-          to="/servicios/maritimo"
+          to="/servicios/consultoria"
           onClick={() => {
             handleClose();
             toggleDrawer(false)();
           }}
         >
-          {t('navbar.servicios_maritimo')}
+          {t('navbar.consultoria')}
         </MenuItem>
         <MenuItem
           component={Link}
-          to="/servicios/aereo"
+          to="/servicios/asesoria"
           onClick={() => {
             handleClose();
             toggleDrawer(false)();
           }}
         >
-          {t('navbar.servicios_aereo')}
+          {t('navbar.asesoria')}
         </MenuItem>
         <MenuItem
           component={Link}
-          to="/servicios/terrestre"
+          to="/servicios/mentoria"
           onClick={() => {
             handleClose();
             toggleDrawer(false)();
           }}
         >
-          {t('navbar.servicios_terrestre')}
+          {t('navbar.mentoria')}
         </MenuItem>
       </Menu>
 
@@ -128,7 +128,7 @@ export default function MainLayout() {
       <AppBar
         position="static"
         sx={{
-          backgroundImage: "linear-gradient(to right, #e85252, #b73939)",
+          backgroundImage: "linear-gradient(to right, #1e3662, #1f7a8b)",
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -183,7 +183,7 @@ export default function MainLayout() {
         sx={{
           py: 1,
           mt: "auto",
-          backgroundImage: "linear-gradient(to right, #e85252, #b73939)",
+          backgroundImage: "linear-gradient(to right, #1e3662, #1f7a8b)",
           color: "#fff",
           display: "flex",
           alignItems: "center",
@@ -231,7 +231,7 @@ export default function MainLayout() {
           display: "flex",
           justifyContent: "center",
           gap: 2,
-          backgroundImage: "linear-gradient(to right, #e85252, #b73939)",
+          backgroundImage: "linear-gradient(to right, #1e3662, #1f7a8b)",
           py: 1,
         }}
       >
@@ -262,7 +262,7 @@ export default function MainLayout() {
         sx={{
           textAlign: "center",
           py: 1,
-          backgroundImage: "linear-gradient(to right, #e85252, #b73939)",
+          backgroundImage: "linear-gradient(to right, #1e3662, #1f7a8b)",
           color: "#fff",
           fontSize: 12,
         }}

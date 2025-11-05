@@ -1,18 +1,17 @@
 {
     "navbar": {
         "inicio": "Inicio",
-        "nosotros": "Quiénes Somos",
+        "nosotros": "Nosotros",
         "servicios": "Servicios",
         "consultoria": "Consultoría",
         "asesoria": "Asesoría",
         "mentoria": "Mentoría",
-        "incubacion": "Incubación",
         "contacto": "Contacto"
     },
     "footer": {
-        "empresa": "ORVIUM",
-        "descripcion": "Servicios para optimizar la integración mundial (internacionalización) de negocios",
-        "direccion_linea1": "Ciudad de México, México",
+        "corporativo": "CORPORATIVO",
+        "direccion_linea1": "Carretera Federal Puebla - Tlaxcala Km 11.5",
+        "direccion_linea2": "No. 1027 c.p. 72100 Puebla, Pue.",
         "copyright": "© 2025 ORVIUM"
     },
     "home_page": {
@@ -20,14 +19,47 @@
         "meta_descripcion": "Consultoría, asesoría y mentoría para impulsar la internacionalización de empresas y proyectos globales.",
         "titulo_principal": "ORVIUM",
         "subtitulo": "Servicios para optimizar la integración mundial (internacionalización) de negocios",
+        "boton_contacto": "Contactanos",
         "quienes_somos_titulo": "Quiénes Somos",
         "quienes_somos_texto": "Somos un equipo interdisciplinario operando en diversos ámbitos del comercio internacional. Ofrecemos consultoría y asesoría para definir, estructurar, valorar la viabilidad técnico-financiera e implementar iniciativas de internacionalización de negocios.",
         "servicios_titulo": "Nuestros Servicios",
         "servicios_lista": {
             "consultoria": "Consultoría",
             "asesoria": "Asesoría",
-            "mentoria": "Mentoría",
-            "incubacion": "Incubación"
+            "mentoria": "Mentoría"
+        }
+    },
+    "nosotros_page": {
+        "meta_titulo": "Quiénes Somos - ORVIUM",
+        "meta_descripcion": "En ORVIUM somos un equipo interdisciplinario enfocado en impulsar la internacionalización de negocios mediante consultoría, asesoría y mentoría especializadas.",
+        "titulo_principal": "Quiénes Somos",
+        "subtitulo": "Expertos en internacionalización de negocios y expansión global",
+        "descripcion": "ORVIUM es una organización dedicada a fortalecer las capacidades de las empresas y emprendedores para integrarse en los mercados internacionales. Contamos con un equipo multidisciplinario con experiencia en comercio exterior, finanzas, derecho, marketing y gestión tecnológica.",
+        "mision": {
+            "titulo": "Misión",
+            "texto": "Brindar soluciones integrales para la internacionalización de empresas y proyectos, promoviendo su competitividad y sostenibilidad en los mercados globales."
+        },
+        "vision": {
+            "titulo": "Visión",
+            "texto": "Ser un referente en América Latina en el desarrollo de estrategias de internacionalización y vinculación empresarial a nivel global."
+        },
+        "valores": {
+            "titulo": "Valores",
+            "lista": [
+                "Innovación y mejora continua",
+                "Compromiso con la excelencia",
+                "Transparencia y ética profesional",
+                "Colaboración y trabajo en equipo",
+                "Orientación a resultados"
+            ]
+        },
+        "equipo": {
+            "titulo": "Nuestro Equipo",
+            "texto": "Integrado por consultores, analistas y mentores con trayectoria en los sectores público y privado, ORVIUM combina experiencia técnica, financiera y estratégica para acompañar a las empresas en su proceso de internacionalización."
+        },
+        "objetivo": {
+            "titulo": "Nuestro Objetivo",
+            "texto": "Facilitar la expansión internacional de las empresas mediante estrategias personalizadas que integren innovación, financiamiento y acceso a redes globales."
         }
     },
     "consultoria_page": {
@@ -97,32 +129,53 @@
                 "Acceso a opciones de financiamiento",
                 "Networking internacional"
             ]
+        },
+        "programa_incubacion": {
+            "meta_titulo": "Incubación - ORVIUM",
+            "meta_descripcion": "Transformamos ideas con potencial internacional en empresas listas para integrarse a cadenas globales de valor.",
+            "titulo": "Incubación (16 semanas)",
+            "subtitulo": "De la idea al mercado global",
+            "descripcion": "Ofrecemos convertir ideas con potencial internacional en empresas operativas listas para integrarse en cadenas globales de valor.",
+            "modelo": [
+                "Validación del modelo de negocio (CANVAS)",
+                "Planeación estratégica comercial internacional (visión, misión, objetivos)",
+                "Desarrollo del producto o servicio (PMV)",
+                "Elaboración de plan de negocios (mercado, técnico, financiero)",
+                "Evaluación de viabilidad técnico-financiera",
+                "Cumplimiento legal y logístico",
+                "Presentación final ante aliados y fuentes de financiamiento"
+            ],
+            "resultados": [
+                "Plan de negocio integral",
+                "Producto mínimo viable",
+                "Herramientas para ajustar el modelo de negocio",
+                "Asesoría en planeación y seguimiento del impacto",
+                "Verificación de objetivos operativos y financieros",
+                "Acceso a fuentes de financiamiento y redes de apoyo",
+                "Mentoría ex post"
+            ]
         }
     },
-    "incubacion_page": {
-        "meta_titulo": "Incubación - ORVIUM",
-        "meta_descripcion": "Transformamos ideas con potencial internacional en empresas listas para integrarse a cadenas globales de valor.",
-        "titulo_principal": "Incubación",
-        "subtitulo": "De la idea al mercado global",
-        "descripcion": "Ofrecemos convertir ideas con potencial internacional en empresas operativas listas para integrarse en cadenas globales de valor.",
-        "duracion": "16 semanas",
-        "modelo": [
-            "Validación del modelo de negocio (CANVAS)",
-            "Planeación estratégica comercial internacional (visión, misión, objetivos)",
-            "Desarrollo del producto o servicio (PMV)",
-            "Elaboración de plan de negocios (mercado, técnico, financiero)",
-            "Evaluación de viabilidad técnico-financiera",
-            "Cumplimiento legal y logístico",
-            "Presentación final ante aliados y fuentes de financiamiento"
-        ],
-        "resultados": [
-            "Plan de negocio integral",
-            "Producto mínimo viable",
-            "Herramientas para ajustar el modelo de negocio",
-            "Asesoría en planeación y seguimiento del impacto",
-            "Verificación de objetivos operativos y financieros",
-            "Acceso a fuentes de financiamiento y redes de apoyo",
-            "Mentoría ex post"
-        ]
+    "contacto_page": {
+    "meta_titulo": "Contacto - cslogix",
+    "meta_descripcion": "Ponte en contacto con cslogix para recibir asesoría en logística internacional y gestión aduanera.",
+    "titulo_formulario": "Contáctenos",
+    "campo_nombre": "Nombre",
+    "campo_email": "Email",
+    "campo_empresa": "Empresa",
+    "campo_mensaje": "Mensaje",
+    "error_campos_vacios": " Por favor completa todos los campos para enviar el formulario.",
+    "boton_enviar": "ENVIAR",
+    "alerta_exito": " Mensaje enviado con éxito",
+    "alerta_error": " Hubo un error al enviar el mensaje",
+    "titulo_llamanos": "LLÁMANOS",
+    "titulo_correo": "CORREO ELECTRÓNICO",
+    "titulo_localizacion": "LOCALIZACIÓN",
+    "direccion_linea1": "Carretera Federal libre Puebla, 11 5 1027,",
+    "direccion_linea2": "90880 Tenancingo, Tlax., México",
+    "titulo_servicios": "NUESTROS MEJORES SERVICIOS",
+    "servicio_consultoria": "Consultoria",
+    "servicio_asesoria": "Asesoria",
+    "servicio_mentoria": "Mentoria"
     }
 }

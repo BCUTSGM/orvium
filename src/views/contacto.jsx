@@ -10,11 +10,9 @@ import {
   Button,
   CircularProgress,
 } from "@mui/material";
-import {
-  FlightTakeoff,
-  DirectionsBoat,
-  LocalShipping,
-} from "@mui/icons-material";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import SchoolIcon from "@mui/icons-material/School";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { useEffect } from "react";
@@ -282,27 +280,27 @@ export default function Contacto() {
                 <Grid item xs={12} sm={4}>
                   <ListItem sx={{ justifyContent: "center" }}>
                     <ListItemIcon sx={{ minWidth: 36 }}>
-                      <LocalShipping color="primary" fontSize="large" />
+                      <BusinessCenterIcon color="primary" fontSize="large" />
                     </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_terrestre")} />
+                    <ListItemText primary={t("contacto_page.servicio_consultoria")} />
                   </ListItem>
                 </Grid>
 
                 <Grid item xs={12} sm={4}>
                   <ListItem sx={{ justifyContent: "center" }}>
                     <ListItemIcon sx={{ minWidth: 36 }}>
-                      <DirectionsBoat color="primary" fontSize="large" />
+                      <SchoolIcon color="primary" fontSize="large" />
                     </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_maritimo")} />
+                    <ListItemText primary={t("contacto_page.servicio_asesoria")} />
                   </ListItem>
                 </Grid>
 
                 <Grid item xs={12} sm={4}>
                   <ListItem sx={{ justifyContent: "center" }}>
                     <ListItemIcon sx={{ minWidth: 36 }}>
-                      <FlightTakeoff color="primary" fontSize="large" />
+                      <LightbulbIcon color="primary" fontSize="large" />
                     </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_aereo")} />
+                    <ListItemText primary={t("contacto_page.servicio_mentoria")} />
                   </ListItem>
                 </Grid>
               </Grid>

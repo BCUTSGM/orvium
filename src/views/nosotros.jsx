@@ -2,21 +2,23 @@ import {
   Box,
   Typography,
   Grid,
-  Button
+  Card,
+  CardContent,
+  List,
+  ListItem,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import fondo1 from "../assets/nosotros/fondo-fw1.png";
-import fondo3 from "../assets/nosotros/fondo-fw2.png";
-import fondo2 from "../assets/nosotros/fondo-fw3.png";
 import { useTranslation } from "react-i18next";
+import FlagIcon from "@mui/icons-material/Flag";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { motion } from "framer-motion";
 
 export default function Nosotros() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   useEffect(() => {
+    // SEO dinámico
     document.title = t("nosotros_page.meta_titulo");
 
     let metaDesc = document.querySelector("meta[name='description']");
@@ -33,141 +35,199 @@ export default function Nosotros() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/nosotros";
+    linkCanonical.href = "https://www.orvium.com/nosotros";
   }, [t]);
 
+  const MotionCard = motion(Card);
+
+  // Animación de entrada para las tarjetas
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+  };
+
   return (
-    <Box>
-      <Box sx={{ px: { xs: 2, sm: 4, md: 6 }, py: { xs: 2, md: 4 }, textAlign: "center" }}>
-        {/* Encabezado */}
-        <Typography
-          variant="h3"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            mb: 4,
-          }}
-        >
-          {t("nosotros_page.titulo_principal")}
-        </Typography>
-
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 4,
-          }}
-        >
-          {t("nosotros_page.subtitulo")}
-        </Typography>
-
-        <Typography variant="body1" sx={{ textAlign: "justify" }}>
-          {t("nosotros_page.parrafo_compromiso")}
-        </Typography>
-      </Box>
-
-      <Box
-        sx={{
-          width: "100%", py: 6, px: { xs: 2, sm: 4, md: 10 },
-          backgroundColor: "#e2e2daff",
-        }}
+    <Box
+      sx={{
+        px: { xs: 2, sm: 4, md: 8 },
+        py: { xs: 4, md: 6 },
+        backgroundColor: "#f7f9fc",
+      }}
+    >
+      {/* Encabezado principal */}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          {/* Columna Misión */}
-          <Grid item xs={12} md={6} sx={{ flexBasis: 450 }}>
-            <Typography variant="h4" gutterBottom sx={{ textAlign: "center" }}>
-              {t("nosotros_page.mision_titulo")}
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "justify" }}>
-              {t("nosotros_page.mision_texto")}
-            </Typography>
-          </Grid>
+        <Box textAlign="center" mb={6}>
+          <Typography variant="h3" fontWeight="bold" color="#113a63" gutterBottom>
+            {t("nosotros_page.titulo_principal")}
+          </Typography>
 
-          {/* Columna Visión */}
-          <Grid item xs={12} md={6} sx={{ flexBasis: 450 }}>
-            <Typography variant="h4" gutterBottom sx={{ textAlign: "center" }}>
-              {t("nosotros_page.vision_titulo")}
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "justify" }}>
-              {t("nosotros_page.vision_texto")}
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{ maxWidth: "800px", margin: "0 auto" }}
+          >
+            {t("nosotros_page.subtitulo")}
+          </Typography>
+        </Box>
+      </motion.div>
 
-      <Grid container sx={{ backgroundColor: "#b73939", mb: 5 }}>
-        <Grid item xs={8}>
-          <Box sx={{ padding: 4, textAlign: "justify" }}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                textAlign: "center",
-                mb: 4,
-              }}
-            >
-              {t("nosotros_page.gestion_titulo")}
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ mb: 4, color: "#fff", textAlign: "justify" }}
-            >
-              {t("nosotros_page.gestion_parrafo")}
-            </Typography>
-          </Box>
-          <Box
+      {/* Descripción general */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+      >
+        <Box sx={{ maxWidth: "900px", margin: "0 auto", mb: 8 }}>
+          <Typography
+            variant="body1"
             sx={{
-              display: "flex",
-              gap: 4,
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
+              textAlign: "justify",
+              lineHeight: 1.8,
+              fontSize: "1.1rem",
+              color: "#333",
             }}
           >
-            {[fondo1, fondo2, fondo3].map((img, index) => (
-              <Box
-                key={index}
-                component="img"
-                src={img}
-                alt={`Contenedor ${index + 1}`}
-                sx={{
-                  width: "100%",
-                  maxWidth: "300px",
-                  borderRadius: 3,
-                  boxShadow: 3,
-                  objectFit: "cover",
-                  mx: { xs: 1, md: 2 },
-                  my: { xs: 1, md: 0 },
-                }}
-              />
-            ))}
-          </Box>
-          <Box sx={{ textAlign: "center" }}>
-            <Button
-              variant="contained"
-              endIcon={<ArrowForwardIcon />}
-              sx={{
-                borderRadius: 3,
-                px: 3,
-                py: 1.5,
-                fontSize: { xs: "0.8rem", sm: "1rem" },
-                background: "#e85252",
-                mt: 4,
-                mb: 2,
-              }}
-              onClick={() => navigate("/contacto")}
-            >
-              {t("nosotros_page.gestion_boton")}
-            </Button>
-          </Box>
+            {t("nosotros_page.descripcion")}
+          </Typography>
+        </Box>
+      </motion.div>
+
+      {/* Tarjetas de Misión, Visión y Valores */}
+      <Grid container spacing={4} justifyContent="center">
+        {/* Misión */}
+        <Grid item xs={12} sm={6} md={4}>
+          <MotionCard
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            sx={{
+              background: "white",
+              borderRadius: "16px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              textAlign: "center",
+              py: 4,
+            }}
+          >
+            <CardContent>
+              <FlagIcon sx={{ fontSize: 50, color: "#1976d2", mb: 2 }} />
+              <Typography variant="h5" fontWeight="bold" color="#113a63">
+                {t("nosotros_page.mision.titulo")}
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 2, color: "#555" }}>
+                {t("nosotros_page.mision.texto")}
+              </Typography>
+            </CardContent>
+          </MotionCard>
+        </Grid>
+
+        {/* Visión */}
+        <Grid item xs={12} sm={6} md={4}>
+          <MotionCard
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            sx={{
+              background: "white",
+              borderRadius: "16px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              textAlign: "center",
+              py: 4,
+            }}
+          >
+            <CardContent>
+              <VisibilityIcon sx={{ fontSize: 50, color: "#ff9800", mb: 2 }} />
+              <Typography variant="h5" fontWeight="bold" color="#113a63">
+                {t("nosotros_page.vision.titulo")}
+              </Typography>
+              <Typography variant="body1" sx={{ mt: 2, color: "#555" }}>
+                {t("nosotros_page.vision.texto")}
+              </Typography>
+            </CardContent>
+          </MotionCard>
+        </Grid>
+
+        {/* Valores */}
+        <Grid item xs={12} sm={6} md={4}>
+          <MotionCard
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            sx={{
+              background: "white",
+              borderRadius: "16px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              textAlign: "center",
+              py: 4,
+            }}
+          >
+            <CardContent>
+              <FavoriteIcon sx={{ fontSize: 50, color: "#e91e63", mb: 2 }} />
+              <Typography variant="h5" fontWeight="bold" color="#113a63">
+                {t("nosotros_page.valores.titulo")}
+              </Typography>
+              <List>
+                {t("nosotros_page.valores.lista", { returnObjects: true }).map(
+                  (valor, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{
+                        color: "#555",
+                        textAlign: "center",
+                        justifyContent: "center",
+                        py: 0.5,
+                      }}
+                    >
+                      • {valor}
+                    </ListItem>
+                  )
+                )}
+              </List>
+            </CardContent>
+          </MotionCard>
         </Grid>
       </Grid>
+
+      {/* Equipo */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Box sx={{ maxWidth: "900px", margin: "80px auto 0", textAlign: "center" }}>
+          <Typography variant="h4" fontWeight="bold" color="#113a63" gutterBottom>
+            {t("nosotros_page.equipo.titulo")}
+          </Typography>
+          <Typography variant="body1" color="#555" sx={{ fontSize: "1.1rem" }}>
+            {t("nosotros_page.equipo.texto")}
+          </Typography>
+        </Box>
+      </motion.div>
+
+      {/* Objetivo */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Box sx={{ maxWidth: "900px", margin: "60px auto 0", textAlign: "center" }}>
+          <Typography variant="h4" fontWeight="bold" color="#113a63" gutterBottom>
+            {t("nosotros_page.objetivo.titulo")}
+          </Typography>
+          <Typography variant="body1" color="#555" sx={{ fontSize: "1.1rem" }}>
+            {t("nosotros_page.objetivo.texto")}
+          </Typography>
+        </Box>
+      </motion.div>
     </Box>
   );
 }

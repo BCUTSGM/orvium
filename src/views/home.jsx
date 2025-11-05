@@ -12,7 +12,6 @@ import fondo from "../assets/home/portada.jpg";
 import maritimo from "../assets/home/maritimo.png";
 import terrestre from "../assets/home/terrestre.png";
 import aereo from "../assets/home/aereo.png";
-import servicios from "../assets/home/servicios.png";
 import celular from "../assets/home/celular.jpg";
 import documentacionOperacion from "../assets/home/1.png";
 import despachoAduanal from "../assets/home/2.png";
@@ -50,7 +49,7 @@ export default function Home() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/";
+    linkCanonical.href = "https://www.orvium.com/";
   }, [t]);
 
   return (
@@ -74,14 +73,14 @@ export default function Home() {
             color="white"
             sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
           >
-            {t("home_page.portada_titulo")}
+            {t("home_page.titulo_principal")}
           </Typography>
           <Typography
             variant="h6"
             color="white"
             sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
           >
-            {t("home_page.portada_subtitulo_1")}
+            {t("home_page.subtitulo")}
           </Typography>
           <Button
             variant="contained"
@@ -96,7 +95,7 @@ export default function Home() {
               mt: 2,
             }}
           >
-            {t("home_page.portada_boton")}
+            {t("home_page.boton_contacto")}
           </Button>
         </Box>
       </Box>
@@ -114,25 +113,6 @@ export default function Home() {
         >
           {t("home_page.servicios_titulo")}
         </Typography>
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 2,
-            fontSize: { xs: "1.2rem", md: "1.5rem" },
-          }}
-        >
-          {t("home_page.servicios_subtitulo")}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ color: "#113a63", textAlign: "center", mb: 2 }}
-        >
-          {t("home_page.servicios_parrafo")}
-        </Typography>
       </Box>
 
       <Grid container spacing={4} justifyContent="center" textAlign="center">
@@ -142,7 +122,7 @@ export default function Home() {
             variant="h5"
             sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
           >
-            {t("home_page.servicios_card_maritimo")}
+            {t("home_page.servicios_lista.consultoria")}
           </Typography>
           <Box
             component="img"
@@ -155,7 +135,7 @@ export default function Home() {
               cursor: "pointer",
               borderRadius: 2,
             }}
-            onClick={() => (window.location.href = "/servicios/maritimo")}
+            onClick={() => (window.location.href = "/servicios/consultoria")}
           />
         </Grid>
         {/* Segundo servicio */}
@@ -164,7 +144,7 @@ export default function Home() {
             variant="h5"
             sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
           >
-            {t("home_page.servicios_card_terrestre")}
+            {t("home_page.servicios_lista.asesoria")}
           </Typography>
           <Box
             component="img"
@@ -177,7 +157,7 @@ export default function Home() {
               cursor: "pointer",
               borderRadius: 2,
             }}
-            onClick={() => (window.location.href = "/servicios/terrestre")}
+            onClick={() => (window.location.href = "/servicios/asesoria")}
           />
         </Grid>
         {/* Tercer servicio */}
@@ -186,7 +166,7 @@ export default function Home() {
             variant="h5"
             sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
           >
-            {t("home_page.servicios_card_aereo")}
+            {t("home_page.servicios_lista.mentoria")}
           </Typography>
           <Box
             component="img"
@@ -199,56 +179,12 @@ export default function Home() {
               cursor: "pointer",
               borderRadius: 2,
             }}
-            onClick={() => (window.location.href = "/servicios/aereo")}
+            onClick={() => (window.location.href = "/servicios/mentoria")}
           />
         </Grid>
       </Grid>
 
-      <Box sx={{ padding: 4, textAlign: "justify", mt: 6 }}>
-        <Typography
-          variant="h3"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1.8rem", md: "2.5rem" },
-          }}
-        >
-          {t("home_page.control_titulo")}
-        </Typography>
-        <Typography
-          variant="h5"
-          gutterBottom
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            textAlign: "center",
-            mb: 4,
-            fontSize: { xs: "1.8rem", md: "2.5rem" },
-          }}
-        >
-          {t("home_page.control_subtitulo")}
-        </Typography>
-      </Box>
-
-      <Box
-        sx={{
-          backgroundImage: `url(${servicios})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
-          minHeight: { xs: "20vh", md: "90vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mb: 5,
-        }}
-      ></Box>
-
-      <Grid container spacing={4} sx={{ backgroundColor: "#b73939", p: 1 }}>
+      <Grid container spacing={4} sx={{ backgroundColor: "#1f7a8b", p: 1 }}>
         {/* Primer contenedor */}
         <Grid
           item
@@ -312,7 +248,7 @@ export default function Home() {
                 </ListItem>
 
                 <ListItem sx={{ p: 0 }}>
-                  <ListItemIcon sx={{ minWidth: 24, mr: 2}}>
+                  <ListItemIcon sx={{ minWidth: 24, mr: 2 }}>
                     <img src={viñeta} alt="icono" width="20" height="20" />
                   </ListItemIcon>
                   <ListItemText primary={t("home_page.tecnologia_lista_2")} />
@@ -327,7 +263,7 @@ export default function Home() {
                   px: 3,
                   py: 1.5,
                   fontSize: "0.5 rem",
-                  background: "#e85252",
+                  background: "#1e3662",
                   mt: 2,
                 }}
                 onClick={() => navigate("/nosotros")}
@@ -345,7 +281,7 @@ export default function Home() {
           gutterBottom
           sx={{
             fontWeight: "bold",
-            color: "#113a63",
+            color: "#1f7a8b",
             textAlign: "center",
             fontSize: { xs: "1.5rem", md: "2rem" },
           }}
@@ -478,7 +414,7 @@ export default function Home() {
                   px: 3,
                   py: 1.5,
                   fontSize: "0.5 rem",
-                  background: "#e85252",
+                  background: "#1e3662",
                   mt: 2,
                 }}
                 onClick={() => navigate("/contacto")}

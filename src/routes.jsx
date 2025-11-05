@@ -5,9 +5,9 @@ import Nosotros from "./views/nosotros"
 import Contacto from "./views/contacto";
 import Blog from "./views/blog";
 
-import Maritimo from "./views/servicios/maritimo";
-import Aereo from "./views/servicios/aereo";
-import Terrestre from "./views/servicios/terrestre";
+import Asesoria from "./views/servicios/asesoria";
+import Consultoria from "./views/servicios/consultoria";
+import Mentoria from "./views/servicios/mentoria";
 import Test from "./views/test";
 
 import BlogDetalle from "./views/noticias/blogDetalle";
@@ -22,16 +22,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/servicios/maritimo",
-        element: <Maritimo />,
+        path: "/servicios/asesoria",
+        element: <Asesoria />,
       },
       {
-        path: "/servicios/terrestre",
-        element: <Terrestre />,
+        path: "/servicios/consultoria",
+        element: <Consultoria />,
       },
       {
-        path: "/servicios/aereo",
-        element: <Aereo />,
+        path: "/servicios/mentoria",
+        element: <Mentoria />,
       },
       {
         path: "/contacto",
