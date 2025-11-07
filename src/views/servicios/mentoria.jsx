@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Imagen from "../../assets/Mentoria/Portada mentoria.png";
 import { useTranslation } from "react-i18next";
 
 export default function Mentoria() {
@@ -32,12 +33,16 @@ export default function Mentoria() {
       {/* Encabezado */}
       <Box
         sx={{
-          backgroundColor: "#113a63",
+          backgroundImage: `url(${Imagen})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           width: "100vw",
-          height: { xs: "50vh", md: "80vh" },
+          height: { xs: "60vh", md: "100vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          mb: 4,
           px: { xs: 2, md: 0 },
         }}
       >
@@ -92,7 +97,11 @@ export default function Mentoria() {
 
         <Typography
           variant="body1"
-          sx={{ mb: 3, textAlign: "justify", fontSize: { xs: "1rem", md: "1.1rem" } }}
+          sx={{
+            mb: 3,
+            textAlign: "justify",
+            fontSize: { xs: "1rem", md: "1.1rem" },
+          }}
         >
           {t("mentoria_page.programa_aceleramiento.objetivo")}
         </Typography>
@@ -104,13 +113,13 @@ export default function Mentoria() {
           Modelo:
         </Typography>
         <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_aceleramiento.modelo", { returnObjects: true }).map(
-            (item, index) => (
-              <li key={index} style={{ marginBottom: "0.5rem" }}>
-                {item}
-              </li>
-            )
-          )}
+          {t("mentoria_page.programa_aceleramiento.modelo", {
+            returnObjects: true,
+          }).map((item, index) => (
+            <li key={index} style={{ marginBottom: "0.5rem" }}>
+              {item}
+            </li>
+          ))}
         </ul>
 
         <Typography
@@ -120,13 +129,13 @@ export default function Mentoria() {
           Resultados esperados:
         </Typography>
         <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_aceleramiento.resultados", { returnObjects: true }).map(
-            (item, index) => (
-              <li key={index} style={{ marginBottom: "0.5rem" }}>
-                {item}
-              </li>
-            )
-          )}
+          {t("mentoria_page.programa_aceleramiento.resultados", {
+            returnObjects: true,
+          }).map((item, index) => (
+            <li key={index} style={{ marginBottom: "0.5rem" }}>
+              {item}
+            </li>
+          ))}
         </ul>
       </Box>
 
@@ -146,7 +155,11 @@ export default function Mentoria() {
 
         <Typography
           variant="body1"
-          sx={{ mb: 3, textAlign: "justify", fontSize: { xs: "1rem", md: "1.1rem" } }}
+          sx={{
+            mb: 3,
+            textAlign: "justify",
+            fontSize: { xs: "1rem", md: "1.1rem" },
+          }}
         >
           {t("mentoria_page.programa_incubacion.descripcion")}
         </Typography>
@@ -158,13 +171,13 @@ export default function Mentoria() {
           Modelo:
         </Typography>
         <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_incubacion.modelo", { returnObjects: true }).map(
-            (item, index) => (
-              <li key={index} style={{ marginBottom: "0.5rem" }}>
-                {item}
-              </li>
-            )
-          )}
+          {t("mentoria_page.programa_incubacion.modelo", {
+            returnObjects: true,
+          }).map((item, index) => (
+            <li key={index} style={{ marginBottom: "0.5rem" }}>
+              {item}
+            </li>
+          ))}
         </ul>
 
         <Typography
@@ -174,13 +187,13 @@ export default function Mentoria() {
           Resultados esperados:
         </Typography>
         <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_incubacion.resultados", { returnObjects: true }).map(
-            (item, index) => (
-              <li key={index} style={{ marginBottom: "0.5rem" }}>
-                {item}
-              </li>
-            )
-          )}
+          {t("mentoria_page.programa_incubacion.resultados", {
+            returnObjects: true,
+          }).map((item, index) => (
+            <li key={index} style={{ marginBottom: "0.5rem" }}>
+              {item}
+            </li>
+          ))}
         </ul>
       </Box>
 

@@ -1,7 +1,18 @@
-import { Box, Typography, Button, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+  Grid,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import Imagen from "../../assets/Consultoria/Portada Consultoria.png";
+import Imagen2 from "../../assets/Consultoria/Importacion y exportacion.png";
+import viñeta from "../../assets/Viñeta2.png";
 
 export default function Consultoria() {
   const { t } = useTranslation();
@@ -29,14 +40,14 @@ export default function Consultoria() {
 
   return (
     <Box>
-      {/* Encabezado */}
+      {/* ENCABEZADO */}
       <Box
         sx={{
-          backgroundColor:"#1f7a8b",
+          backgroundImage: `url(${Imagen})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          width: "100vw",
+          width: "100%",
           height: { xs: "60vh", md: "100vh" },
           display: "flex",
           alignItems: "center",
@@ -51,13 +62,14 @@ export default function Consultoria() {
           sx={{
             fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
             textAlign: "center",
+            px: 2,
           }}
         >
           {t("consultoria_page.titulo_principal")}
         </Typography>
       </Box>
 
-      {/* Descripción general */}
+      {/* DESCRIPCIÓN GENERAL */}
       <Box sx={{ px: { xs: 2, md: 8 }, py: 4, textAlign: "justify" }}>
         <Typography
           variant="h3"
@@ -85,7 +97,7 @@ export default function Consultoria() {
           {t("consultoria_page.descripcion_general")}
         </Typography>
 
-        {/* Diagnóstico */}
+        {/* DIAGNÓSTICO */}
         <Typography
           variant="h4"
           gutterBottom
@@ -111,7 +123,7 @@ export default function Consultoria() {
           {t("consultoria_page.diagnostico.descripcion")}
         </Typography>
 
-        <List sx={{ pl: { xs: 2, md: 6 } }}>
+        <List sx={{ pl: { xs: 1, md: 6 } }}>
           {[
             "producto",
             "mercado",
@@ -128,13 +140,15 @@ export default function Consultoria() {
                   fontSize: { xs: "0.95rem", sm: "1rem" },
                   textAlign: "justify",
                 }}
-                primary={`• ${t(`consultoria_page.diagnostico.analisis.${key}`)}`}
+                primary={`• ${t(
+                  `consultoria_page.diagnostico.analisis.${key}`
+                )}`}
               />
             </ListItem>
           ))}
         </List>
 
-        {/* Estrategias */}
+        {/* ESTRATEGIAS */}
         <Typography
           variant="h4"
           gutterBottom
@@ -160,23 +174,105 @@ export default function Consultoria() {
           {t("consultoria_page.estrategias.descripcion")}
         </Typography>
 
-        <List sx={{ pl: { xs: 2, md: 6 } }}>
-          {t("consultoria_page.estrategias.puntos", { returnObjects: true }).map(
-            (punto, index) => (
-              <ListItem key={index} sx={{ py: 0.5 }}>
-                <ListItemText
-                  primaryTypographyProps={{
-                    fontSize: { xs: "0.95rem", sm: "1rem" },
-                    textAlign: "justify",
+        <Grid
+          container
+          spacing={4}
+          justifyContent="center"
+          alignItems="center"
+          direction={{ xs: "column", md: "row" }}
+          sx={{
+            flexWrap: { xs: "wrap", md: "nowrap" },
+            overflow: "hidden",
+            px: { xs: 2, sm: 4, md: 6 },
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src={Imagen2}
+              alt="Imagen consultoría"
+              sx={{
+                width: { xs: "90%", sm: "85%", md: "100%" },
+                height: { xs: 240, sm: 300, md: 380 },
+                objectFit: "cover",
+                borderRadius: 2,
+                boxShadow: 3,
+                transition: "all 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.02)",
+                },
+              }}
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              textAlign: "justify",
+              pr: { xs: 0, md: 3 },
+            }}
+          >
+            <List
+              sx={{
+                pl: { xs: 1, sm: 2 },
+                display: "flex",
+                flexDirection: "column",
+                gap: { xs: 1, sm: 1.5 },
+              }}
+            >
+              {t("consultoria_page.estrategias.puntos", {
+                returnObjects: true,
+              }).map((punto, index) => (
+                <ListItem
+                  key={index}
+                  sx={{
+                    py: { xs: 0.3, sm: 0.6 },
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: { xs: 1, sm: 1.5 },
                   }}
-                  primary={`• ${punto}`}
-                />
-              </ListItem>
-            )
-          )}
-        </List>
+                >
+                  <Box
+                    component="img"
+                    src={viñeta}
+                    alt="icono"
+                    sx={{
+                      width: { xs: 14, sm: 20, md: 24 },
+                      height: "auto",
+                      mt: { xs: "3px", lg: "4px" },
+                    }}
+                  />
+                  <ListItemText
+                    primaryTypographyProps={{
+                      fontSize: {
+                        xs: "0.9rem",
+                        sm: "1rem",
+                        md: "1.1rem",
+                      },
+                      lineHeight: 1.5,
+                      textAlign: "justify",
+                    }}
+                    primary={punto}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Grid>
+        </Grid>
 
-        {/* Botón de contacto */}
         <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
           <Button
             variant="contained"
@@ -186,6 +282,9 @@ export default function Consultoria() {
               py: { xs: 1.2, md: 1.5 },
               fontSize: { xs: "0.9rem", sm: "1.1rem" },
               background: "#1f7a8b",
+              "&:hover": {
+                background: "#16606d",
+              },
             }}
             onClick={() => navigate("/contacto")}
           >

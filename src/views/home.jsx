@@ -8,10 +8,12 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import consultoria from "../assets/home/maritimo.png";
-import asesoria from "../assets/home/terrestre.png";
-import mentoria from "../assets/home/aereo.png";
-import viñeta from "../assets/home/viñetaB.png";
+import logo from "../assets/orvium.png";
+import Imagen from "../assets/home/Inicio portada.png";
+import consultoria from "../assets/home/Consultoría.png";
+import asesoria from "../assets/home/Asesoría.png";
+import mentoria from "../assets/home/Mentoría.png";
+import viñeta from "../assets/Viñeta1.png"
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useNavigate } from "react-router-dom";
@@ -50,31 +52,27 @@ export default function Home() {
       {/* Sección principal */}
       <Box
         sx={{
-          backgroundColor:"#1f7a8b",
+          backgroundImage: `url(${Imagen})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
           minHeight: "80vh",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "left",
           mb: 6,
         }}
       >
-        <Box sx={{ padding: 4, textAlign: "right" }}>
-          <Typography
-            variant="h2"
-            color="white"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
-          >
-            {t("home_page.titulo_principal")}
-          </Typography>
+        <Box sx={{ padding: 12, textAlign: "left" }}>
+          <Box component="img" src={logo} alt="Logo" sx={{ width: "300px" }} />
           <Typography
             variant="h6"
             color="white"
-            sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
+            sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
           >
             {t("home_page.subtitulo")}
+            <br></br>
+            {t("home_page.subtitulo2")}
           </Typography>
           <Button
             variant="contained"
@@ -131,12 +129,6 @@ export default function Home() {
 
         <Grid container spacing={4} justifyContent="center" textAlign="center">
           <Grid item xs={12} sm={6} md={4}>
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-            >
-              {t("home_page.servicios_lista.consultoria")}
-            </Typography>
             <Box
               component="img"
               src={consultoria}
@@ -153,12 +145,6 @@ export default function Home() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-            >
-              {t("home_page.servicios_lista.asesoria")}
-            </Typography>
             <Box
               component="img"
               src={asesoria}
@@ -175,12 +161,6 @@ export default function Home() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: "bold", mb: 2, color: "#113a63" }}
-            >
-              {t("home_page.servicios_lista.mentoria")}
-            </Typography>
             <Box
               component="img"
               src={mentoria}
@@ -216,7 +196,7 @@ export default function Home() {
           {[...Array(5)].map((_, i) => (
             <ListItem key={i} sx={{ py: 0.5 }}>
               <ListItemIcon sx={{ minWidth: 24 }}>
-                <img src={viñeta} alt="icono" width="18" height="18" />
+                    <img src={viñeta} alt="icono" width="15" height="15" />
               </ListItemIcon>
               <ListItemText
                 primary={t(`home_page.beneficios_lista.${i}`)}
@@ -298,7 +278,11 @@ export default function Home() {
       >
         <Typography
           variant="h4"
-          sx={{ fontWeight: "bold", mb: 2, fontSize: { xs: "1.5rem", md: "2rem" } }}
+          sx={{
+            fontWeight: "bold",
+            mb: 2,
+            fontSize: { xs: "1.5rem", md: "2rem" },
+          }}
         >
           {t("home_page.llamado_accion_titulo")}
         </Typography>

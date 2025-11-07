@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Imagen from "../../assets/Asesoria/Portada asesoria.png";
 import { useTranslation } from "react-i18next";
 
 export default function Asesoria() {
@@ -32,9 +33,12 @@ export default function Asesoria() {
       {/* Encabezado principal */}
       <Box
         sx={{
-          backgroundColor: "#113a63",
+          backgroundImage: `url(${Imagen})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           width: "100vw",
-          height: { xs: "50vh", md: "70vh" },
+          height: { xs: "60vh", md: "100vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -100,17 +104,27 @@ export default function Asesoria() {
 
         <Typography
           variant="body1"
-          sx={{ mb: 3, textAlign: "center", fontSize: { xs: "1rem", md: "1.1rem" } }}
+          sx={{
+            mb: 3,
+            textAlign: "center",
+            fontSize: { xs: "1rem", md: "1.1rem" },
+          }}
         >
           {t("asesoria_page.servicios.descripcion")}
         </Typography>
 
         <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
           <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
-            <li>{t("asesoria_page.servicios.listado.empresas_clientes_proveedores")}</li>
+            <li>
+              {t(
+                "asesoria_page.servicios.listado.empresas_clientes_proveedores"
+              )}
+            </li>
             <li>{t("asesoria_page.servicios.listado.directorio_empresas")}</li>
             <li>{t("asesoria_page.servicios.listado.primer_contacto")}</li>
-            <li>{t("asesoria_page.servicios.listado.representacion_comercial")}</li>
+            <li>
+              {t("asesoria_page.servicios.listado.representacion_comercial")}
+            </li>
             <li>{t("asesoria_page.servicios.listado.acompanamiento")}</li>
           </ul>
         </Box>
@@ -133,11 +147,11 @@ export default function Asesoria() {
 
         <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
           <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
-            {t("asesoria_page.valores_agregados.puntos", { returnObjects: true }).map(
-              (punto, index) => (
-                <li key={index}>{punto}</li>
-              )
-            )}
+            {t("asesoria_page.valores_agregados.puntos", {
+              returnObjects: true,
+            }).map((punto, index) => (
+              <li key={index}>{punto}</li>
+            ))}
           </ul>
         </Box>
 
