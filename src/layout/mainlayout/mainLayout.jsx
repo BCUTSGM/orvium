@@ -26,7 +26,6 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import logo from "../../assets/orvium.png";
 import ScrollToTop from "../scrollToTop"
 import Translate from "../mainlayout/translate"
-import BotpressChat from "./bootpressChat";
 import { useTranslation } from "react-i18next";
 
 
@@ -173,7 +172,6 @@ export default function MainLayout() {
       {/* Body */}
       <Box component="main" sx={{ width: "100%", flex: 1 }}>
         <Translate/>
-        <BotpressChat/>
         <ScrollToTop />
         <Outlet />
       </Box>

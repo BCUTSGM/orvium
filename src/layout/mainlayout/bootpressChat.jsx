@@ -15,10 +15,9 @@ export default function BotpressChat() {
         messagingUrl: "https://messaging.botpress.cloud",
         botName: "Mi Bot",
         theme: "prism",
-        hideWidget: true, // 🔹 Oculta el botón flotante original
+        hideWidget: true,
       });
 
-      // 🔹 Botón lateral personalizado
       const launcher = document.createElement("div");
       document.body.appendChild(launcher);
 
@@ -35,7 +34,7 @@ export default function BotpressChat() {
           right: 0;
           top: 50%;
           transform: translateY(-50%);
-          background: #b73939;
+          background: #1f7a8b;
           color: white;
           padding: 12px 6px;
           border-radius: 8px 0 0 8px;
