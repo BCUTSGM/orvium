@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import FlagIcon from "@mui/icons-material/Flag";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import Mision from "../assets/Nosotros/Recursos página web Orvium 051125-08.png"
+import Vision from "../assets/Nosotros/Recursos página web Orvium 051125-09.png"
+import Valores from "../assets/Nosotros/Recursos página web Orvium 051125-10.png"
 import { motion } from "framer-motion";
 
 export default function Nosotros() {
@@ -115,7 +115,15 @@ export default function Nosotros() {
             }}
           >
             <CardContent>
-              <FlagIcon sx={{ fontSize: 50, color: "#1976d2", mb: 2 }} />
+              <Box
+                component="img"
+                src={Mision}
+                alt="icono"
+                sx={{
+                  width: 80,
+                  mt: { xs: "3px", lg: "4px" },
+                }}
+              />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.mision.titulo")}
               </Typography>
@@ -143,7 +151,15 @@ export default function Nosotros() {
             }}
           >
             <CardContent>
-              <VisibilityIcon sx={{ fontSize: 50, color: "#ff9800", mb: 2 }} />
+              <Box
+                component="img"
+                src={Vision}
+                alt="icono"
+                sx={{
+                  width: 80,
+                  mt: { xs: "3px", lg: "4px" },
+                }}
+              />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.vision.titulo")}
               </Typography>
@@ -171,7 +187,15 @@ export default function Nosotros() {
             }}
           >
             <CardContent>
-              <FavoriteIcon sx={{ fontSize: 50, color: "#e91e63", mb: 2 }} />
+              <Box
+                component="img"
+                src={Valores}
+                alt="icono"
+                sx={{
+                  width: 80,
+                  mt: { xs: "3px", lg: "4px" },
+                }}
+              />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.valores.titulo")}
               </Typography>

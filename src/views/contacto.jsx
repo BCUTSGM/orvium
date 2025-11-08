@@ -307,7 +307,7 @@ export default function Contacto() {
             </Box>
           </Grid>
 
-          <Grid
+          {/* <Grid
             item
             xs={12}
             md={6}
@@ -342,7 +342,7 @@ export default function Contacto() {
                 ></iframe>
               </div>
             </Box>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Paper>
     </Box>
