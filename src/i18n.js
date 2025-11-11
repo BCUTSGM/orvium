@@ -12,7 +12,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 //import translationDA from './locales/da.json';
 //import translationDE from './locales/de.json';
 //import translationEL from './locales/el.json';
-//import translationEN from './locales/en.json';
+import translationEN from './locales/en.json';
 //import translationEO from './locales/eo.json';
 //import translationET from './locales/et.json';
 //import translationEU from './locales/eu.json';
@@ -62,7 +62,7 @@ const resources = {
     //    da: { translation: translationDA },
     //    de: { translation: translationDE },
     //    el: { translation: translationEL },
-    //    en: { translation: translationEN },
+        en: { translation: translationEN },
     //    eo: { translation: translationEO },
     //    et: { translation: translationET },
     //    eu: { translation: translationEU },

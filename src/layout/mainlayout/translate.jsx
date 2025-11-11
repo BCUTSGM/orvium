@@ -21,7 +21,7 @@ export default function Translate() {
       // { code: "da", label: "Dansk (Danés)" },
       // { code: "de", label: "Deutsch (Alemán)" },
       // { code: "el", label: "Ελληνικά (Griego)" },
-      // { code: "en", label: "English (Inglés)" },
+      { code: "en", label: "English (Inglés)" },
       // { code: "eo", label: "Esperanto" },
       { code: "es", label: "Español" },
       // { code: "et", label: "Eesti (Estonio)" },

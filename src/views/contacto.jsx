@@ -72,10 +72,10 @@ export default function Contacto() {
 
     emailjs
       .sendForm(
-        "service_zg48ip8",
-        "template_0r3zs8w",
+        "service_rb88s7i",
+        "template_h99qgnn",
         form.current,
-        "pUoH9hfiE5Guw5wmR"
+        "wooFand_G6-wVwwzB"
       )
       .then(
         () => {
@@ -206,7 +206,7 @@ export default function Contacto() {
                 disabled={!isFormValid || loading}
                 sx={{
                   mt: 2,
-                  bgcolor: isFormValid && !loading ? "#e85252" : "#ccc",
+                  bgcolor: isFormValid && !loading ? "#1f7a8b" : "#ccc",
                   borderRadius: 2,
                   py: 1.5,
                   fontWeight: "bold",
@@ -247,14 +247,14 @@ export default function Contacto() {
               <Typography variant="h6" fontWeight="bold" gutterBottom>
                 {t("contacto_page.titulo_llamanos")}
               </Typography>
-              <Typography variant="body1">+52 55 6075 1740</Typography>
+              <Typography variant="body1">+52 222 156 0064</Typography>
             </Box>
 
             <Box sx={{ mb: 4 }}>
               <Typography variant="h6" fontWeight="bold" gutterBottom>
                 {t("contacto_page.titulo_correo")}
               </Typography>
-              <Typography variant="body1">contacto@cslogix.com</Typography>
+              <Typography variant="body1">contacto@orvium.com.mx</Typography>
             </Box>
 
             <Box sx={{ mb: 4 }}>

@@ -1,0 +1,222 @@
+{
+    "navbar": {
+        "inicio": "Home",
+        "nosotros": "About Us",
+        "servicios": "Services",
+        "consultoria": "Consulting",
+        "asesoria": "Advisory",
+        "mentoria": "Mentoring",
+        "contacto": "Contact"
+    },
+    "footer": {
+        "corporativo": "CORPORATE",
+        "direccion_linea1": "Federal Highway Puebla - Tlaxcala Km 11.5",
+        "direccion_linea2": "No. 1027, Zip Code 72100 Puebla, Pue.",
+        "copyright": "© 2025 ORVIUM"
+    },
+    "home_page": {
+        "meta_titulo": "Orvium - Business Internationalization",
+        "meta_descripcion": "Specialized consulting, advisory, and mentoring services to drive internationalization, competitiveness, and global expansion of your company.",
+        "titulo_principal": "ORVIUM",
+        "subtitulo": "Strategic services to optimize the",
+        "subtitulo2": "global integration of businesses",
+        "boton_contacto": "Contact Us",
+        "quienes_somos_titulo": "About Us",
+        "quienes_somos_texto": "We are an interdisciplinary team with extensive experience in international trade, finance, marketing, and business development. At ORVIUM, we support companies in their internationalization process — from evaluating their export potential to implementing expansion strategies in new markets. Our mission is to turn your ideas into tangible global opportunities.",
+        "servicios_titulo": "Our Services",
+        "servicios_lista": {
+            "consultoria": "Consulting",
+            "asesoria": "Advisory",
+            "mentoria": "Mentoring"
+        },
+        "beneficios_titulo": "Benefits of Working With Us",
+        "beneficios_lista": [
+            "Access to updated market information and international opportunities",
+            "Design of customized strategies based on your company’s export maturity",
+            "Network of contacts and strategic alliances in key markets",
+            "Comprehensive support throughout all stages of the internationalization process",
+            "Optimization of international logistics, marketing, and financial management"
+        ],
+        "sectores_titulo": "Sectors We Work With",
+        "sectores_lista": [
+            "Agroindustry and food",
+            "Textile, fashion, and design",
+            "Technology and innovation",
+            "Professional services and consulting",
+            "Manufacturing and automotive industry",
+            "Renewable energy and environment"
+        ],
+        "porque_elegirnos_titulo": "Why Choose ORVIUM?",
+        "porque_elegirnos_texto": "We stand out for providing strategic solutions tailored to each client. We don’t just advise — we implement concrete actions with measurable results. Our methodology combines technical analysis, market insight, and practical experience to ensure sustainable and profitable international expansion.",
+        "llamado_accion_titulo": "Expand Your Business to the World",
+        "llamado_accion_texto": "We accompany you at every step toward internationalization: from the initial diagnosis to the consolidation of your global presence. Together, we can help your products and services cross borders.",
+        "llamado_accion_boton": "Request a Meeting"
+    },
+    "nosotros_page": {
+        "meta_titulo": "About Us - ORVIUM",
+        "meta_descripcion": "At ORVIUM, we are an interdisciplinary team focused on driving business internationalization through specialized consulting, advisory, and mentoring.",
+        "titulo_principal": "About Us",
+        "subtitulo": "Experts in Business Internationalization and Global Expansion",
+        "descripcion": "An interdisciplinary team operating in various areas of international trade, enabling us to offer consulting and advisory services to define, structure, assess technical and financial feasibility, and implement business internationalization initiatives.",
+        "mision": {
+            "titulo": "Mission",
+            "texto": "To provide comprehensive solutions for the internationalization of companies and projects, promoting their competitiveness and sustainability in global markets."
+        },
+        "vision": {
+            "titulo": "Vision",
+            "texto": "To become a leading reference in Latin America in the development of internationalization and global business linkage strategies."
+        },
+        "valores": {
+            "titulo": "Values",
+            "lista": [
+                "Innovation and continuous improvement",
+                "Commitment to excellence",
+                "Transparency and professional ethics",
+                "Collaboration and teamwork",
+                "Results-oriented approach"
+            ]
+        },
+        "equipo": {
+            "titulo": "Our Team",
+            "texto": "Composed of consultants, analysts, and mentors with experience in both the public and private sectors, ORVIUM combines technical, financial, and strategic expertise to guide companies through their internationalization process."
+        },
+        "objetivo": {
+            "titulo": "Our Goal",
+            "texto": "To facilitate the international expansion of companies through personalized strategies integrating innovation, financing, and access to global networks."
+        }
+    },
+    "consultoria_page": {
+        "meta_titulo": "Consulting - ORVIUM",
+        "meta_descripcion": "We evaluate export potential and technical-financial feasibility to ensure your business’s successful internationalization.",
+        "titulo_principal": "Consulting",
+        "subtitulo": "Diagnosis and Planning to Compete Globally",
+        "descripcion_general": "We conduct a diagnostic review of the export initiative to determine whether the products and export management processes are ready to compete in the selected markets.",
+        "diagnostico": {
+            "titulo": "Export Offer Diagnosis",
+            "descripcion": "We analyze the company’s and product’s capacity to compete in international markets considering the following aspects:",
+            "analisis": {
+                "producto": "Technical and market characteristics of the product.",
+                "mercado": "Demand, competition, and marketing mechanisms, including packaging and labeling.",
+                "capacidad_produccion": "Production size, process, and costs.",
+                "organizacion_administrativa_tecnologica": "Administrative and technological structure for managing international markets.",
+                "cadena_distribucion": "Evaluation of the international distribution chain.",
+                "finanzas": "Financial capacity or requirements.",
+                "alianzas_estrategicas": "Identification of strategic alliances.",
+                "viabilidad_tecnica_financiera": "Analysis of technical and financial feasibility."
+            }
+        },
+        "estrategias": {
+            "titulo": "Export or Import Strategies",
+            "descripcion": "We integrate information options that allow designing a long-term action plan with short-term steps, identifying implementation mechanisms and technical-financial feasibility to:",
+            "puntos": [
+                "Define the best options in tariff and non-tariff regulations.",
+                "Identify potential markets, including marketing mechanisms.",
+                "Structure the logistics chain by selecting suitable transports and routes.",
+                "Implement the internationalization strategy."
+            ]
+        }
+    },
+    "asesoria_page": {
+        "meta_titulo": "Advisory - ORVIUM",
+        "meta_descripcion": "We provide strategic advisory services to boost your company’s internationalization through information, networking, and personalized guidance.",
+        "titulo_principal": "Advisory",
+        "subtitulo": "Information, connections, and strategic support to expand your business globally",
+        "descripcion_general": "Our advisory services offer valuable information to enhance your company’s internationalization processes, facilitating decision-making and growth in new markets.",
+        "servicios": {
+            "titulo": "International Advisory Services",
+            "descripcion": "We support companies in every stage of their international expansion through the following services:",
+            "listado": {
+                "empresas_clientes_proveedores": "Client and/or supplier listings: Identified companies within your target market.",
+                "directorio_empresas": "International business directory: Includes addresses and contact details obtained after in-depth secondary research.",
+                "primer_contacto": "First business contact: We arrange an initial meeting with potential clients, either virtually or in person.",
+                "representacion_comercial": "Commercial representation: We enhance the promotion of your export or import operations in selected markets.",
+                "acompanamiento": "Comprehensive support: We advise you at any stage of your global expansion plan, optimizing results with tailor-made solutions."
+            }
+        },
+        "valores_agregados": {
+            "titulo": "Added Value of Our Services",
+            "puntos": [
+                "Identification of improvement areas with actionable recommendations.",
+                "Flexibility: Services can be contracted as a package or individually according to your needs.",
+                "Initial evaluation of business expectations to offer personalized and effective solutions."
+            ]
+        }
+    },
+    "mentoria_page": {
+        "meta_titulo": "Mentoring - ORVIUM",
+        "meta_descripcion": "Personalized mentoring programs to accelerate internationalization and connect with funding sources.",
+        "titulo_principal": "Mentoring",
+        "subtitulo": "Expert guidance to boost your global expansion",
+        "descripcion": "We identify, refine, or confirm opportunity areas in your internationalization project, offering mentoring, consulting, or personalized guidance to achieve your goals and connect with funding sources.",
+        "programa_aceleramiento": {
+            "titulo": "Acceleration (10 Weeks)",
+            "objetivo": "To create value, enrich the operational experience of the company or project, and define an action plan to seize business opportunities by identifying necessary adjustments in products, manufacturing, innovation management, and financial or administrative structures.",
+            "modelo": [
+                "Ex-ante comprehensive diagnosis.",
+                "Assessment of innovation processes or proposed products.",
+                "Acceleration plan with targeted actions on market, technical, financial, administrative, legal, and strategic aspects.",
+                "Follow-up mentoring on the action plan.",
+                "Tailor-made mentoring sessions with experts.",
+                "Financial evaluation and capital inflow/outflow determination.",
+                "Identification of funding sources.",
+                "Management mentoring.",
+                "Pitch training and presentation to investors.",
+                "Post-program follow-up after 30 and 60 days."
+            ],
+            "resultados": [
+                "Effective access to international markets.",
+                "Maximized business and management potential.",
+                "Strategic guidance to minimize risks in international operations.",
+                "Access to financing and investment options.",
+                "Focused international networking."
+            ]
+        },
+        "programa_incubacion": {
+            "meta_titulo": "Incubation - ORVIUM",
+            "meta_descripcion": "We turn ideas with international potential into operational companies ready to join global value chains.",
+            "titulo": "Incubation (16 Weeks)",
+            "subtitulo": "From Idea to Global Market",
+            "descripcion": "We help transform ideas with international potential into operational businesses ready to integrate into global value chains.",
+            "modelo": [
+                "Validation of the business model using CANVAS methodology.",
+                "International Strategic Planning: vision, mission, objectives, and long-term strategies with short-term actions.",
+                "Development of a Minimum Viable Product (MVP) to identify product-market fit.",
+                "Business plan covering market, technical, financial, and organizational aspects.",
+                "Technical and financial feasibility analysis.",
+                "Legal and logistics compliance.",
+                "Final presentation to partners and funding sources."
+            ],
+            "resultados": [
+                "Comprehensive business plan.",
+                "Minimum Viable Product.",
+                "Tools to evaluate and refine the business model.",
+                "Advisory and support in planning and impact tracking.",
+                "Verification of objectives in production, marketing, finance, and HR.",
+                "Access to funding sources and support networks.",
+                "Post-incubation mentoring and follow-up."
+            ]
+        }
+    },
+    "contacto_page": {
+        "meta_titulo": "Contact - Orvium",
+        "meta_descripcion": "Get in touch with Orvium to receive expert guidance in international business consulting and expansion.",
+        "titulo_formulario": "Contact Us",
+        "campo_nombre": "Name",
+        "campo_email": "Email",
+        "campo_empresa": "Company",
+        "campo_mensaje": "Message",
+        "error_campos_vacios": "Please fill in all fields before submitting the form.",
+        "boton_enviar": "SEND",
+        "alerta_exito": "Message sent successfully",
+        "alerta_error": "An error occurred while sending the message",
+        "titulo_llamanos": "CALL US",
+        "titulo_correo": "EMAIL",
+        "titulo_localizacion": "LOCATION",
+        "direccion_linea1": "Federal Highway Puebla, 11.5 1027,",
+        "direccion_linea2": "90880 Tenancingo, Tlax., Mexico",
+        "titulo_servicios": "OUR MAIN SERVICES",
+        "servicio_consultoria": "Consulting",
+        "servicio_asesoria": "Advisory",
+        "servicio_mentoria": "Mentoring"
+    }
+}

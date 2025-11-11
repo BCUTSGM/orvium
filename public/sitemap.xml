@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Página principal -->
   <url>
-    <loc>https://cslogix.com/</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>1.0</priority>
   </url>
 
   <!-- Sección: Servicios -->
   <url>
-    <loc>https://cslogix.com/servicios/maritimo</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/servicios/consultoria</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cslogix.com/servicios/aereo</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/servicios/asesoria</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cslogix.com/servicios/terrestre</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/servicios/mentoria</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>0.9</priority>
   </url>
 
+
   <!-- Sección: Nosotros -->
   <url>
-    <loc>https://cslogix.com/nosotros</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/nosotros</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>0.8</priority>
   </url>
 
 
   <!-- Sección: Contacto -->
   <url>
-    <loc>https://cslogix.com/contacto</loc>
-    <lastmod>2025-09-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sección: Blog -->
-  <url>
-    <loc>https://cslogix.com/blog</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://orvium.com.mx/contacto</loc>
+    <lastmod>2025-11-11</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

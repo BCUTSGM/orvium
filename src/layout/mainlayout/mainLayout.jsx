@@ -234,21 +234,21 @@ export default function MainLayout() {
         }}
       >
         <a
-          href="https://www.instagram.com/cslogix.mx/"
+          href="https://www.instagram.com/orvium.mx/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <InstagramIcon sx={{ cursor: "pointer", color: "#fff" }} />
         </a>
         <a
-          href="https://www.facebook.com/share/1DL59nnGCW/"
+          href="https://www.facebook.com/share/167rqPwK1F/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FacebookIcon sx={{ cursor: "pointer", color: "#fff" }} />
         </a>
         <a
-          href="https://www.linkedin.com/company/cslogix/"
+          href="https://www.linkedin.com/company/orvium.mx/"
           target="_blank"
           rel="noopener noreferrer"
         >

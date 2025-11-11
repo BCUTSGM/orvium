@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Card, CardContent, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Imagen from "../../assets/Mentoria/Portada mentoria.png";
@@ -52,6 +52,7 @@ export default function Mentoria() {
           sx={{
             fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
             textAlign: "center",
+            textShadow: "2px 2px 10px rgba(0,0,0,0.4)",
           }}
         >
           {t("mentoria_page.titulo_principal")}
@@ -81,121 +82,160 @@ export default function Mentoria() {
         </Typography>
       </Box>
 
-      {/* Programa de Aceleramiento */}
-      <Box sx={{ px: { xs: 2, md: 8 }, py: 4 }}>
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            mb: 2,
-            textAlign: "center",
-          }}
-        >
-          {t("mentoria_page.programa_aceleramiento.titulo")}
-        </Typography>
+      {/* Sección de Programas */}
+      <Grid
+        container
+        spacing={4}
+        sx={{
+          px: { xs: 2, md: 8 },
+          py: 6,
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {/* Tarjeta Aceleramiento */}
+        <Grid item xs={12} md={6}>
+          <Card
+            sx={{
+              height: "100%",
+              borderRadius: "20px",
+              color: "white",
+              background: "linear-gradient(135deg, #1e3662 0%, #1f7a8b 100%)",
+              boxShadow: "0 12px 30px rgba(30, 54, 98, 0.4)",
+              transition: "all 0.4s ease",
+              "&:hover": {
+                transform: "translateY(-5px)",
+                boxShadow: "0 20px 40px rgba(31, 122, 139, 0.6)",
+              },
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  mb: 3,
+                  textShadow: "1px 1px 6px rgba(0,0,0,0.3)",
+                }}
+              >
+                {t("mentoria_page.programa_aceleramiento.titulo")}
+              </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            mb: 3,
-            textAlign: "justify",
-            fontSize: { xs: "1rem", md: "1.1rem" },
-          }}
-        >
-          {t("mentoria_page.programa_aceleramiento.objetivo")}
-        </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 3,
+                  textAlign: "justify",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  opacity: 0.9,
+                }}
+              >
+                {t("mentoria_page.programa_aceleramiento.objetivo")}
+              </Typography>
 
-        <Typography
-          variant="h6"
-          sx={{ fontWeight: "bold", color: "#113a63", mb: 1 }}
-        >
-          Modelo:
-        </Typography>
-        <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_aceleramiento.modelo", {
-            returnObjects: true,
-          }).map((item, index) => (
-            <li key={index} style={{ marginBottom: "0.5rem" }}>
-              {item}
-            </li>
-          ))}
-        </ul>
+              <Typography
+                variant="h6"
+                sx={{ fontWeight: "bold", mb: 1 }}
+              >
+                Modelo:
+              </Typography>
+              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
+                {t("mentoria_page.programa_aceleramiento.modelo", {
+                  returnObjects: true,
+                }).map((item, index) => (
+                  <li key={index} style={{ marginBottom: "0.5rem" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-        <Typography
-          variant="h6"
-          sx={{ fontWeight: "bold", color: "#113a63", mt: 3 }}
-        >
-          Resultados esperados:
-        </Typography>
-        <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_aceleramiento.resultados", {
-            returnObjects: true,
-          }).map((item, index) => (
-            <li key={index} style={{ marginBottom: "0.5rem" }}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </Box>
+              <Typography variant="h6" sx={{ fontWeight: "bold", mt: 3 }}>
+                Resultados esperados:
+              </Typography>
+              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
+                {t("mentoria_page.programa_aceleramiento.resultados", {
+                  returnObjects: true,
+                }).map((item, index) => (
+                  <li key={index} style={{ marginBottom: "0.5rem" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </Grid>
 
-      {/* Programa de Incubación */}
-      <Box sx={{ px: { xs: 2, md: 8 }, py: 4 }}>
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            color: "#113a63",
-            mb: 2,
-            textAlign: "center",
-          }}
-        >
-          {t("mentoria_page.programa_incubacion.titulo")}
-        </Typography>
+        {/* Tarjeta Incubación */}
+        <Grid item xs={12} md={6}>
+          <Card
+            sx={{
+              height: "100%",
+              borderRadius: "20px",
+              color: "white",
+              background: "linear-gradient(135deg, #557dbe 0%, #2cb4b4 100%)",
+              boxShadow: "0 12px 30px rgba(85,125,190,0.4)",
+              transition: "all 0.4s ease",
+              "&:hover": {
+                transform: "translateY(-5px)",
+                boxShadow: "0 20px 40px rgba(44,180,180,0.6)",
+              },
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  mb: 3,
+                  textShadow: "1px 1px 6px rgba(0,0,0,0.3)",
+                }}
+              >
+                {t("mentoria_page.programa_incubacion.titulo")}
+              </Typography>
 
-        <Typography
-          variant="body1"
-          sx={{
-            mb: 3,
-            textAlign: "justify",
-            fontSize: { xs: "1rem", md: "1.1rem" },
-          }}
-        >
-          {t("mentoria_page.programa_incubacion.descripcion")}
-        </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 3,
+                  textAlign: "justify",
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  opacity: 0.9,
+                }}
+              >
+                {t("mentoria_page.programa_incubacion.descripcion")}
+              </Typography>
 
-        <Typography
-          variant="h6"
-          sx={{ fontWeight: "bold", color: "#113a63", mb: 1 }}
-        >
-          Modelo:
-        </Typography>
-        <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_incubacion.modelo", {
-            returnObjects: true,
-          }).map((item, index) => (
-            <li key={index} style={{ marginBottom: "0.5rem" }}>
-              {item}
-            </li>
-          ))}
-        </ul>
+              <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+                Modelo:
+              </Typography>
+              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
+                {t("mentoria_page.programa_incubacion.modelo", {
+                  returnObjects: true,
+                }).map((item, index) => (
+                  <li key={index} style={{ marginBottom: "0.5rem" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-        <Typography
-          variant="h6"
-          sx={{ fontWeight: "bold", color: "#113a63", mt: 3 }}
-        >
-          Resultados esperados:
-        </Typography>
-        <ul style={{ marginLeft: "1.5rem" }}>
-          {t("mentoria_page.programa_incubacion.resultados", {
-            returnObjects: true,
-          }).map((item, index) => (
-            <li key={index} style={{ marginBottom: "0.5rem" }}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </Box>
+              <Typography variant="h6" sx={{ fontWeight: "bold", mt: 3 }}>
+                Resultados esperados:
+              </Typography>
+              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
+                {t("mentoria_page.programa_incubacion.resultados", {
+                  returnObjects: true,
+                }).map((item, index) => (
+                  <li key={index} style={{ marginBottom: "0.5rem" }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
 
       {/* Botón de contacto */}
       <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
@@ -206,7 +246,11 @@ export default function Mentoria() {
             px: { xs: 3, md: 4 },
             py: { xs: 1.2, md: 1.5 },
             fontSize: { xs: "0.9rem", sm: "1.1rem" },
-            background: "#1f7a8b",
+            background: "linear-gradient(90deg, #1f7a8b 0%, #2cb4b4 100%)",
+            boxShadow: "0 8px 20px rgba(31,122,139,0.4)",
+            "&:hover": {
+              background: "linear-gradient(90deg, #1e3662 0%, #1f7a8b 100%)",
+            },
           }}
           onClick={() => navigate("/contacto")}
         >
