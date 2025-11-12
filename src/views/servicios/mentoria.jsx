@@ -25,8 +25,37 @@ export default function Mentoria() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/servicios/mentoria";
+    linkCanonical.href = "https://orvium.com.mx/servicios/mentoria";
   }, [t]);
+
+  // 🔹 Nuevo renderList con colores oficiales Orvium
+  const renderList = (items, color) => (
+    <ul style={{ marginLeft: 0, paddingLeft: 0, listStyle: "none" }}>
+      {items.map((item, index) => (
+        <li
+          key={index}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "0.6rem",
+          }}
+        >
+          <span
+            style={{
+              width: "10px",
+              height: "10px",
+              borderRadius: "50%",
+              backgroundColor: color,
+              display: "inline-block",
+              marginRight: "10px",
+              flexShrink: 0,
+            }}
+          ></span>
+          <span style={{ opacity: 0.9 }}>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <Box>
@@ -134,34 +163,25 @@ export default function Mentoria() {
                 {t("mentoria_page.programa_aceleramiento.objetivo")}
               </Typography>
 
-              <Typography
-                variant="h6"
-                sx={{ fontWeight: "bold", mb: 1 }}
-              >
+              <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
                 Modelo:
               </Typography>
-              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
-                {t("mentoria_page.programa_aceleramiento.modelo", {
+              {renderList(
+                t("mentoria_page.programa_aceleramiento.modelo", {
                   returnObjects: true,
-                }).map((item, index) => (
-                  <li key={index} style={{ marginBottom: "0.5rem" }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                }),
+                "#2cb4b4" // Turquesa
+              )}
 
               <Typography variant="h6" sx={{ fontWeight: "bold", mt: 3 }}>
                 Resultados esperados:
               </Typography>
-              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
-                {t("mentoria_page.programa_aceleramiento.resultados", {
+              {renderList(
+                t("mentoria_page.programa_aceleramiento.resultados", {
                   returnObjects: true,
-                }).map((item, index) => (
-                  <li key={index} style={{ marginBottom: "0.5rem" }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                }),
+                "#b3d1ff" // Azul claro
+              )}
             </CardContent>
           </Card>
         </Grid>
@@ -173,8 +193,8 @@ export default function Mentoria() {
               height: "100%",
               borderRadius: "20px",
               color: "white",
-              background: "linear-gradient(135deg, #557dbe 0%, #2cb4b4 100%)",
-              boxShadow: "0 12px 30px rgba(85,125,190,0.4)",
+              background: "linear-gradient(135deg, #1f7a8b 0%, #2cb4b4 100%)",
+              boxShadow: "0 12px 30px rgba(31,122,139,0.4)",
               transition: "all 0.4s ease",
               "&:hover": {
                 transform: "translateY(-5px)",
@@ -210,35 +230,29 @@ export default function Mentoria() {
               <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
                 Modelo:
               </Typography>
-              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
-                {t("mentoria_page.programa_incubacion.modelo", {
+              {renderList(
+                t("mentoria_page.programa_incubacion.modelo", {
                   returnObjects: true,
-                }).map((item, index) => (
-                  <li key={index} style={{ marginBottom: "0.5rem" }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                }),
+                "#1e3662" // Azul oscuro
+              )}
 
               <Typography variant="h6" sx={{ fontWeight: "bold", mt: 3 }}>
                 Resultados esperados:
               </Typography>
-              <ul style={{ marginLeft: "1.5rem", opacity: 0.9 }}>
-                {t("mentoria_page.programa_incubacion.resultados", {
+              {renderList(
+                t("mentoria_page.programa_incubacion.resultados", {
                   returnObjects: true,
-                }).map((item, index) => (
-                  <li key={index} style={{ marginBottom: "0.5rem" }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                }),
+                "#1f7a8b" // Azul petróleo
+              )}
             </CardContent>
           </Card>
         </Grid>
       </Grid>
 
       {/* Botón de contacto */}
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 6, mb: 8 }}>
         <Button
           variant="contained"
           sx={{
@@ -257,6 +271,7 @@ export default function Mentoria() {
           {t("global.boton_contacto", "Contáctanos")}
         </Button>
       </Box>
+
     </Box>
   );
 }

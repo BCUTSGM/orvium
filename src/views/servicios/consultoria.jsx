@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import Imagen from "../../assets/Consultoria/Portada Consultoria.png";
 import Imagen2 from "../../assets/Consultoria/Importacion y exportacion.png";
 import viñeta from "../../assets/Viñeta2.png";
+import viñeta2 from "../../assets/Viñeta3.png"
 
 export default function Consultoria() {
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ export default function Consultoria() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.orvium.com/servicios/consultoria";
+    linkCanonical.href = "https://orvium.com.mx/servicios/consultoria";
   }, [t]);
 
   return (
@@ -135,12 +136,27 @@ export default function Consultoria() {
             "viabilidad_tecnica_financiera",
           ].map((key, index) => (
             <ListItem key={index} sx={{ py: 0.5 }}>
+              <Box
+                component="img"
+                src={viñeta2}
+                alt="icono"
+                sx={{
+                  width: { xs: 14, sm: 20, md: 24 },
+                  height: "auto",
+                  mt: { xs: "3px", lg: "4px" },
+                }}
+              />
               <ListItemText
                 primaryTypographyProps={{
-                  fontSize: { xs: "0.95rem", sm: "1rem" },
+                  fontSize: {
+                    xs: "0.9rem",
+                    sm: "1rem",
+                    md: "1.1rem",
+                  },
+                  lineHeight: 1.5,
                   textAlign: "justify",
                 }}
-                primary={`• ${t(
+                primary={`${t(
                   `consultoria_page.diagnostico.analisis.${key}`
                 )}`}
               />
@@ -148,7 +164,6 @@ export default function Consultoria() {
           ))}
         </List>
 
-        {/* ESTRATEGIAS */}
         <Typography
           variant="h4"
           gutterBottom

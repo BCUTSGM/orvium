@@ -38,7 +38,7 @@ export default function Contacto() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.cslogix.com/contacto";
+    linkCanonical.href = "https://orvium.com.mx/contacto";
   }, [t]);
 
   const form = useRef();
@@ -117,7 +117,6 @@ export default function Contacto() {
           overflow: "hidden",
         }}
       >
-        {/* Formulario */}
         <Grid
           container
           direction={{ xs: "column" }}
@@ -223,127 +222,111 @@ export default function Contacto() {
           </Grid>
         </Grid>
 
-        {/* Información + Mapa */}
         <Grid
           container
           direction={{ xs: "column", md: "row" }}
-          sx={{ flexWrap: { xs: "wrap", md: "nowrap" }, alignItems: "stretch" }}
+          sx={{
+            flexWrap: { xs: "wrap", md: "nowrap" },
+            alignItems: "stretch",
+            width: "100vw", 
+            margin: 0,
+            padding: 0,
+            position: "relative",
+            left: "50%",
+            right: "50%",
+            transform: "translateX(-50%)", 
+          }}
         >
-          {/* Información de contacto */}
           <Grid
             item
             xs={12}
             md={6}
             sx={{
               bgcolor: "#f4f4f4",
-              p: 4,
+              p: { xs: 3, md: 6 },
               display: "flex",
-              flexDirection: "column",
               justifyContent: "center",
-              borderRight: { md: "1px solid #e0e0e0" },
-            }}
-          >
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                {t("contacto_page.titulo_llamanos")}
-              </Typography>
-              <Typography variant="body1">+52 222 156 0064</Typography>
-            </Box>
-
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                {t("contacto_page.titulo_correo")}
-              </Typography>
-              <Typography variant="body1">contacto@orvium.com.mx</Typography>
-            </Box>
-
-            <Box sx={{ mb: 4 }}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                {t("contacto_page.titulo_localizacion")}
-              </Typography>
-              <Typography variant="body1">
-                {t("contacto_page.direccion_linea1")} <br />
-                {t("contacto_page.direccion_linea2")}
-              </Typography>
-            </Box>
-
-            <Box width="100%" mt={4}>
-              <Typography
-                variant="h6"
-                fontWeight="bold"
-                gutterBottom
-                textAlign="center"
-              >
-                {t("contacto_page.titulo_servicios")}
-              </Typography>
-              <Grid container spacing={3} justifyContent="center">
-                <Grid item xs={12} sm={4}>
-                  <ListItem sx={{ justifyContent: "center" }}>
-                    <ListItemIcon sx={{ minWidth: 36 }}>
-                      <BusinessCenterIcon color="primary" fontSize="large" />
-                    </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_consultoria")} />
-                  </ListItem>
-                </Grid>
-
-                <Grid item xs={12} sm={4}>
-                  <ListItem sx={{ justifyContent: "center" }}>
-                    <ListItemIcon sx={{ minWidth: 36 }}>
-                      <SchoolIcon color="primary" fontSize="large" />
-                    </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_asesoria")} />
-                  </ListItem>
-                </Grid>
-
-                <Grid item xs={12} sm={4}>
-                  <ListItem sx={{ justifyContent: "center" }}>
-                    <ListItemIcon sx={{ minWidth: 36 }}>
-                      <LightbulbIcon color="primary" fontSize="large" />
-                    </ListItemIcon>
-                    <ListItemText primary={t("contacto_page.servicio_mentoria")} />
-                  </ListItem>
-                </Grid>
-              </Grid>
-            </Box>
-          </Grid>
-
-          {/* <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              p: 4,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "stretch",
+              alignItems: "center",
+              width: "100%",
             }}
           >
             <Box
               sx={{
-                flex: 1,
-                borderRadius: 2,
-                overflow: "hidden",
-                boxShadow: 2,
-                height: "100%",
-                minHeight: { xs: 320, md: 520 },
-                maxWidth: 1000,
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                textAlign: { xs: "center", md: "left" },
+                gap: { xs: 3, md: 6 },
+                width: "100%",
+                maxWidth: "1400px",
+                mx: "auto",
               }}
             >
-              <div style={{ width: "100%", height: "500px" }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.3527129928409!2d-98.22231567419021!3d19.131323746318387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc5e64e325e41%3A0x67ddf5e355a4a93e!2scslogix!5e0!3m2!1ses-419!2smx!4v1756934263419!5m2!1ses-419!2smx"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+              <Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  {t("contacto_page.titulo_llamanos")}
+                </Typography>
+                <Typography variant="body1">+52 222 156 0064</Typography>
+              </Box>
+
+              <Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  {t("contacto_page.titulo_correo")}
+                </Typography>
+                <Typography variant="body1">contacto@orvium.com.mx</Typography>
+              </Box>
+
+              <Box>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  {t("contacto_page.titulo_localizacion")}
+                </Typography>
+                <Typography variant="body1">
+                  {t("contacto_page.direccion_linea1")} <br />
+                  {t("contacto_page.direccion_linea2")}
+                </Typography>
+              </Box>
+
+              <Box sx={{ mt: { xs: 2, md: 0 }, textAlign: "center" }}>
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  {t("contacto_page.titulo_servicios")}
+                </Typography>
+                <Grid container spacing={2} justifyContent="center">
+                  <Grid item xs={12} sm={4}>
+                    <ListItem sx={{ justifyContent: "center" }}>
+                      <ListItemIcon sx={{ minWidth: 36 }}>
+                        <BusinessCenterIcon color="primary" fontSize="large" />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={t("contacto_page.servicio_consultoria")}
+                      />
+                    </ListItem>
+                  </Grid>
+
+                  <Grid item xs={12} sm={4}>
+                    <ListItem sx={{ justifyContent: "center" }}>
+                      <ListItemIcon sx={{ minWidth: 36 }}>
+                        <SchoolIcon color="primary" fontSize="large" />
+                      </ListItemIcon>
+                      <ListItemText primary={t("contacto_page.servicio_asesoria")} />
+                    </ListItem>
+                  </Grid>
+
+                  <Grid item xs={12} sm={4}>
+                    <ListItem sx={{ justifyContent: "center" }}>
+                      <ListItemIcon sx={{ minWidth: 36 }}>
+                        <LightbulbIcon color="primary" fontSize="large" />
+                      </ListItemIcon>
+                      <ListItemText primary={t("contacto_page.servicio_mentoria")} />
+                    </ListItem>
+                  </Grid>
+                </Grid>
+              </Box>
             </Box>
-          </Grid> */}
+          </Grid>
         </Grid>
+
       </Paper>
     </Box>
   );

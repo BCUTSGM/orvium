@@ -44,7 +44,7 @@ export default function Home() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.orvium.com/";
+    linkCanonical.href = "https://orvium.com.mx/";
   }, [t]);
 
   return (
@@ -77,7 +77,7 @@ export default function Home() {
           <Button
             variant="contained"
             endIcon={<WhatsAppIcon />}
-            href="https://api.whatsapp.com/send/?phone=525560751740&text=Hola,+quisiera+más+información"
+            href="https://api.whatsapp.com/send/?phone=522221560064&text=Hola,+quisiera+más+información"
             sx={{
               borderRadius: 3,
               px: 3,

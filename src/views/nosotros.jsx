@@ -9,9 +9,10 @@ import {
 } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Mision from "../assets/Nosotros/Recursos página web Orvium 051125-08.png"
-import Vision from "../assets/Nosotros/Recursos página web Orvium 051125-09.png"
-import Valores from "../assets/Nosotros/Recursos página web Orvium 051125-10.png"
+import Imagen from "../assets/Mapa orvium.png";
+import Mision from "../assets/Nosotros/Recursos página web Orvium 051125-08.png";
+import Vision from "../assets/Nosotros/Recursos página web Orvium 051125-09.png";
+import Valores from "../assets/Nosotros/Recursos página web Orvium 051125-10.png";
 import { motion } from "framer-motion";
 
 export default function Nosotros() {
@@ -35,7 +36,7 @@ export default function Nosotros() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.orvium.com/nosotros";
+    linkCanonical.href = "https://orvium.com.mx/nosotros";
   }, [t]);
 
   const MotionCard = motion(Card);
@@ -75,20 +76,35 @@ export default function Nosotros() {
         </Box>
       </motion.div>
 
-      {/* Descripción general */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
       >
-        <Box sx={{ maxWidth: "900px", margin: "0 auto", mb: 8 }}>
+        <Box
+          sx={{
+            maxWidth: "900px",
+            margin: "0 auto",
+            mb: 8,
+            backgroundImage: `url(${Imagen})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            borderRadius: "16px",
+            p: { xs: 3, sm: 5 },
+            color: "#222", // un poco más oscuro para contraste
+            textAlign: "justify",
+            lineHeight: 1.9,
+            fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.3rem" }, // ajustable según tamaño de pantalla
+            boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+          }}
+        >
           <Typography
             variant="body1"
             sx={{
-              textAlign: "justify",
-              lineHeight: 1.8,
-              fontSize: "1.1rem",
-              color: "#333",
+              fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.3rem" },
+              lineHeight: 1.9,
+              fontWeight: 400,
             }}
           >
             {t("nosotros_page.descripcion")}
@@ -96,10 +112,21 @@ export default function Nosotros() {
         </Box>
       </motion.div>
 
+
       {/* Tarjetas de Misión, Visión y Valores */}
-      <Grid container spacing={4} justifyContent="center">
+      <Grid
+        container
+        spacing={4}
+        justifyContent="center"
+        alignItems="stretch"
+        sx={{
+          flexWrap: { xs: "wrap", md: "nowrap" },
+          overflowX: { xs: "visible", md: "auto" },
+          "&::-webkit-scrollbar": { display: "none" },
+        }}
+      >
         {/* Misión */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md="auto">
           <MotionCard
             variants={fadeInUp}
             initial="hidden"
@@ -112,18 +139,11 @@ export default function Nosotros() {
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
               textAlign: "center",
               py: 4,
+              width: { xs: "100%", md: 320 }, // ancho completo en móvil
             }}
           >
             <CardContent>
-              <Box
-                component="img"
-                src={Mision}
-                alt="icono"
-                sx={{
-                  width: 80,
-                  mt: { xs: "3px", lg: "4px" },
-                }}
-              />
+              <Box component="img" src={Mision} alt="icono misión" sx={{ width: 80, mt: "4px" }} />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.mision.titulo")}
               </Typography>
@@ -135,7 +155,7 @@ export default function Nosotros() {
         </Grid>
 
         {/* Visión */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md="auto">
           <MotionCard
             variants={fadeInUp}
             initial="hidden"
@@ -148,18 +168,11 @@ export default function Nosotros() {
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
               textAlign: "center",
               py: 4,
+              width: { xs: "100%", md: 320 },
             }}
           >
             <CardContent>
-              <Box
-                component="img"
-                src={Vision}
-                alt="icono"
-                sx={{
-                  width: 80,
-                  mt: { xs: "3px", lg: "4px" },
-                }}
-              />
+              <Box component="img" src={Vision} alt="icono visión" sx={{ width: 80, mt: "4px" }} />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.vision.titulo")}
               </Typography>
@@ -171,7 +184,7 @@ export default function Nosotros() {
         </Grid>
 
         {/* Valores */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md="auto">
           <MotionCard
             variants={fadeInUp}
             initial="hidden"
@@ -184,42 +197,35 @@ export default function Nosotros() {
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
               textAlign: "center",
               py: 4,
+              width: { xs: "100%", md: 320 },
             }}
           >
             <CardContent>
-              <Box
-                component="img"
-                src={Valores}
-                alt="icono"
-                sx={{
-                  width: 80,
-                  mt: { xs: "3px", lg: "4px" },
-                }}
-              />
+              <Box component="img" src={Valores} alt="icono valores" sx={{ width: 80, mt: "4px" }} />
               <Typography variant="h5" fontWeight="bold" color="#113a63">
                 {t("nosotros_page.valores.titulo")}
               </Typography>
               <List>
-                {t("nosotros_page.valores.lista", { returnObjects: true }).map(
-                  (valor, index) => (
-                    <ListItem
-                      key={index}
-                      sx={{
-                        color: "#555",
-                        textAlign: "center",
-                        justifyContent: "center",
-                        py: 0.5,
-                      }}
-                    >
-                      • {valor}
-                    </ListItem>
-                  )
-                )}
+                {t("nosotros_page.valores.lista", { returnObjects: true }).map((valor, index) => (
+                  <ListItem
+                    key={index}
+                    sx={{
+                      color: "#555",
+                      textAlign: "center",
+                      justifyContent: "center",
+                      py: 0.5,
+                    }}
+                  >
+                    • {valor}
+                  </ListItem>
+                ))}
               </List>
             </CardContent>
           </MotionCard>
         </Grid>
       </Grid>
+
+
 
       {/* Equipo */}
       <motion.div

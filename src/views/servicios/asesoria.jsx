@@ -2,6 +2,8 @@ import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Imagen from "../../assets/Asesoria/Portada asesoria.png";
+import viñeta from "../../assets/Viñeta4.png";
+import viñeta2 from "../../assets/Viñeta1.png";
 import { useTranslation } from "react-i18next";
 
 export default function Asesoria() {
@@ -25,7 +27,7 @@ export default function Asesoria() {
       linkCanonical.rel = "canonical";
       document.head.appendChild(linkCanonical);
     }
-    linkCanonical.href = "https://www.orvium.com/servicios/asesoria";
+    linkCanonical.href = "https://orvium.com.mx/servicios/asesoria";
   }, [t]);
 
   return (
@@ -113,19 +115,34 @@ export default function Asesoria() {
           {t("asesoria_page.servicios.descripcion")}
         </Typography>
 
+        {/* Lista de servicios */}
         <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
-          <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
-            <li>
-              {t(
-                "asesoria_page.servicios.listado.empresas_clientes_proveedores"
-              )}
+          <ul style={{ listStyle: "none", paddingLeft: 0, lineHeight: 1.8, fontSize: "1.1rem" }}>
+            <li style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+              <Box
+                component="img"
+                src={viñeta}
+                alt="icono"
+                sx={{ width: 18, height: "auto", mr: 1.5 }}
+              />
+              {t("asesoria_page.servicios.listado.empresas_clientes_proveedores")}
             </li>
-            <li>{t("asesoria_page.servicios.listado.directorio_empresas")}</li>
-            <li>{t("asesoria_page.servicios.listado.primer_contacto")}</li>
-            <li>
+            <li style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+              <Box component="img" src={viñeta} alt="icono" sx={{ width: 18, height: "auto", mr: 1.5 }} />
+              {t("asesoria_page.servicios.listado.directorio_empresas")}
+            </li>
+            <li style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+              <Box component="img" src={viñeta} alt="icono" sx={{ width: 18, height: "auto", mr: 1.5 }} />
+              {t("asesoria_page.servicios.listado.primer_contacto")}
+            </li>
+            <li style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+              <Box component="img" src={viñeta} alt="icono" sx={{ width: 18, height: "auto", mr: 1.5 }} />
               {t("asesoria_page.servicios.listado.representacion_comercial")}
             </li>
-            <li>{t("asesoria_page.servicios.listado.acompanamiento")}</li>
+            <li style={{ display: "flex", alignItems: "center" }}>
+              <Box component="img" src={viñeta} alt="icono" sx={{ width: 18, height: "auto", mr: 1.5 }} />
+              {t("asesoria_page.servicios.listado.acompanamiento")}
+            </li>
           </ul>
         </Box>
 
@@ -145,12 +162,19 @@ export default function Asesoria() {
           {t("asesoria_page.valores_agregados.titulo")}
         </Typography>
 
+        {/* Lista de valores agregados */}
         <Box sx={{ pl: { xs: 2, md: 6 }, pr: { xs: 2, md: 6 } }}>
-          <ul style={{ lineHeight: 1.8, fontSize: "1.1rem" }}>
-            {t("asesoria_page.valores_agregados.puntos", {
-              returnObjects: true,
-            }).map((punto, index) => (
-              <li key={index}>{punto}</li>
+          <ul style={{ listStyle: "none", paddingLeft: 0, lineHeight: 1.8, fontSize: "1.1rem" }}>
+            {t("asesoria_page.valores_agregados.puntos", { returnObjects: true }).map((punto, index) => (
+              <li key={index} style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+                <Box
+                  component="img"
+                  src={viñeta2}
+                  alt="icono"
+                  sx={{ width: 18, height: "auto", mr: 1.5 }}
+                />
+                {punto}
+              </li>
             ))}
           </ul>
         </Box>
