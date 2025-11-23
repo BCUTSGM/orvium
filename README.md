@@ -1,12 +1,72 @@
-# React + Vite
+ORVIUM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositorio para la aplicación ORVIUM, construida con React + Vite.
 
-Currently, two official plugins are available:
+📋 Contenido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+src/ – Código fuente de la aplicación web.
 
-## Expanding the ESLint configuration
+public/ (o archivos estáticos raíz) – Archivos HTML, favicon, etc.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+index.html – Archivo HTML principal.
+
+vite.config.js – Configuración de Vite.
+
+eslint.config.js – Configuración de ESLint.
+
+translate.cjs – (script de traducción o internacionalización)
+
+package.json / package-lock.json – Dependencias y lockfile.
+
+.gitignore – Ignorar archivos y carpetas.
+
+🚀 Tecnologías utilizadas
+
+React
+ – Librería para la interfaz de usuario.
+
+Vite
+ – Herramienta de bundling/development para desarrollo rápido.
+
+ESLint
+ – Linter para mantener calidad de código y buenas prácticas.
+
+JavaScript (98 %) + HTML + CSS – Los principales lenguajes usados en el proyecto. 
+GitHub
+
+🎯 Objetivo del proyecto
+
+Esta aplicación está pensada para … (añade aquí el propósito específico de “ORVIUM”, por ejemplo: gestión de contenido, panel de dashboard, e-commerce, etc.).
+(Si lo deseas, puedes describir módulos clave o funcionalidades principales: autenticación, paneles, API, etc.)
+
+🛠️ Instalación y puesta en marcha
+
+Clona el repositorio:
+
+git clone https://github.com/BCUTSGM/orvium.git
+cd orvium
+
+
+Instala las dependencias:
+
+npm install
+
+
+o bien, si usas yarn:
+
+yarn install
+
+
+Inicia el servidor de desarrollo:
+
+npm run dev
+
+
+Esto abrirá la app en modo de desarrollo, normalmente en http://localhost:5173 (o el puerto que indique Vite).
+
+Para construir la versión de producción:
+
+npm run build
+
+
+Luego puedes servir los archivos generados desde el directorio dist/.
