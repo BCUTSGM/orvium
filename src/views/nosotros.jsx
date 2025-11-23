@@ -92,10 +92,10 @@ export default function Nosotros() {
             backgroundSize: "cover",
             borderRadius: "16px",
             p: { xs: 3, sm: 5 },
-            color: "#222", // un poco más oscuro para contraste
+            color: "#222",
             textAlign: "justify",
             lineHeight: 1.9,
-            fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.3rem" }, // ajustable según tamaño de pantalla
+            fontSize: { xs: "1.1rem", sm: "1.25rem", md: "1.3rem" },
             boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
           }}
         >
